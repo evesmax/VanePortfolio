@@ -1,0 +1,32 @@
+Crea una página web moderna y minimalista para una fotógrafa profesional llamada "Vane Andrade".
+
+**Objetivos clave:**
+* **Diseño:** Moderno, limpio, minimalista, con énfasis en la visualización de imágenes. Usa una paleta de colores neutros (blanco, gris claro, negro) con un toque sutil de color para acentos (ej. un tono pastel o tierra suave).
+* **Contenido principal:**
+    * **Inicio (Home):** Una sección de bienvenida impactante con una o dos de las mejores fotografías de Vane Andrade en alta calidad. Un eslogan corto y una breve descripción de su estilo o misión.
+    * **Galería (Portfolio):** La sección más importante. Debe ser una galería de fotos interactiva y organizada por categorías claras.
+        * **Categorías de fotografía:** Al menos 3-4 categorías iniciales, por ejemplo:
+            * "Retrato"
+            * "Bodas"
+            * "Eventos"
+            * "Paisaje" (o cualquier otra especialidad de Vane)
+        * Cada categoría debe tener su propia sección o subpágina accesible desde un menú de navegación.
+        * Dentro de cada categoría, las fotos deben presentarse en un formato de cuadrícula (grid) adaptable (responsive) que se vea bien en dispositivos móviles y de escritorio. Al hacer clic en una imagen, debería abrirse una vista más grande con posibilidad de navegación entre ellas (lightbox o modal).
+    * **Acerca de (About Me):** Una sección concisa con una foto profesional de Vane, una breve biografía sobre su trayectoria, filosofía y servicios.
+    * **Contacto (Contact):** Un formulario de contacto sencillo (nombre, email, mensaje) y los enlaces a sus redes sociales profesionales (Instagram, Facebook, etc.). No es necesario que el formulario sea funcional al 100% (es decir, no es necesario que envíe emails reales, con que tenga la estructura visual es suficiente).
+* **Navegación:** Un menú de navegación claro y fijo (sticky header) que incluya "Inicio", "Galería", "Acerca de" y "Contacto". Debe ser responsive (menú hamburguesa en móviles).
+* **Tecnologías:** Utiliza HTML, CSS y JavaScript puro. No uses frameworks de CSS complejos a menos que sea para una librería de galería muy específica y ligera. El enfoque es el minimalismo y la eficiencia.
+* **Consideraciones adicionales:**
+    * **Responsive Design:** La página debe ser completamente adaptable a diferentes tamaños de pantalla (móviles, tablets, escritorio).
+    * **Optimización de imágenes:** Menciona la importancia de usar imágenes optimizadas para la web para una carga rápida. Puedes usar imágenes de marcador de posición (placeholders) si no se proporcionan imágenes reales.
+    * **Fuentes:** Elige fuentes modernas y legibles, como 'Montserrat', 'Lato', 'Open Sans' o 'Roboto'.
+    * **Interacciones sutiles:** Pequeñas animaciones o transiciones al pasar el ratón por los enlaces o las imágenes de la galería para un toque de sofisticación.
+
+**Estructura de archivos propuesta:**
+* `index.html`
+* `css/style.css`
+* `js/script.js`
+* `images/` (carpeta para las fotos, separadas por categorías si es posible, ej. `images/retrato/`, `images/bodas/`)
+
+**Instrucciones para Replit:**
+Genera el código completo para esta página web, incluyendo el HTML, CSS y JavaScript. Proporciona comentarios claros en el código para facilitar la comprensión y modificación. Asume que se utilizarán imágenes de placeholder inicialmente, pero la estructura debe ser fácil de reemplazar con imágenes reales de alta calidad.
