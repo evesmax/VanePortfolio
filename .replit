@@ -1,0 +1,18 @@
+modules = ["nodejs-20", "web", "bash"]
+run = "npm run dev"
+
+[nix]
+channel = "stable-25_05"
+packages = ["dig"]
+
+[deployment]
+run = ["sh", "-c", "npm start"]
+deploymentTarget = "cloudrun"
+build = ["sh", "-c", "npm run build"]
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[agent]
+expertMode = true
