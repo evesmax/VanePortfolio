@@ -17,7 +17,7 @@ export default function AboutSection() {
               Sobre Mí
             </h2>
             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-              Soy Vane Andrade, fotógrafa Profesional, con una trayectoria de más de 15 años dedicada a inmortalizar historias.
+              Soy Vane Andrade, fotógrafa profesional, con una trayectoria de más de 15 años dedicada a inmortalizar historias.
             </p>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
               Con más de 15 años de experiencia capturando la esencia de momentos inolvidables, mi cámara ha sido testigo de la alegría de bodas, la ilusión de XV años, la pureza de comuniones y bautizos, y la magia de cada sesión fotográfica. Disfruto inmensamente trabajar con niños, encontrar esa chispa única en sus sonrisas y gestos. Además, hay algo en la majestuosidad de los paisajes, especialmente la luna, que me cautiva y me inspira a buscar la belleza en cada rincón del mundo. Cada foto que tomo es una pieza de mi corazón, un recuerdo congelado para siempre.
