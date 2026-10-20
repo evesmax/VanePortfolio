@@ -13,7 +13,7 @@ TODAY = "2026-10-19"
 
 src = open("index.src.html", encoding="utf-8").read()
 b64 = lambda p: base64.b64encode(open(p, "rb").read()).decode()
-src = src.replace("{{VANE}}", b64("img/vane.jpg")).replace("{{LOGO}}", b64("img/logo.png")).replace("{{LOGOVA}}", b64("img/logo-va.png"))
+src = src.replace("{{VANE}}", b64("img/vane.jpg")).replace("{{LOGO}}", b64("img/logo.png")).replace("{{LOGOVA}}", b64("img/logo-va.png")).replace("{{VANE2}}", b64("img/vane2.jpg"))
 
 css = src[src.index("<style>") + 7: src.index("</style>")]
 css += """
