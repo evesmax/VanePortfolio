@@ -12,7 +12,7 @@ TODAY = "2026-10-19"
 
 src = open("index.src.html", encoding="utf-8").read()
 b64 = lambda p: base64.b64encode(open(p, "rb").read()).decode()
-src = src.replace("{{VANE}}", b64("img/vane.jpg")).replace("{{LOGO}}", b64("img/logo.png"))
+src = src.replace("{{VANE}}", b64("img/vane.jpg")).replace("{{LOGO}}", b64("img/logo.png")).replace("{{LOGOVA}}", b64("img/logo-va.png"))
 
 css = src[src.index("<style>") + 7: src.index("</style>")]
 css += """
@@ -46,7 +46,7 @@ BUSINESS = {
     "alternateName": "Soy Vane Andrade",
     "url": DOMAIN + "/",
     "image": DOMAIN + "/img/og.jpg",
-    "logo": DOMAIN + "/img/logo.png",
+    "logo": DOMAIN + "/img/logo-va.png",
     "telephone": "+52 33 3465 5385",
     "address": {"@type": "PostalAddress", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "addressCountry": "MX"},
     "areaServed": [{"@type": "City", "name": "Zapopan"}, {"@type": "City", "name": "Guadalajara"}, {"@type": "Country", "name": "México"}],
@@ -74,7 +74,7 @@ def head(title, desc, path, extra_ld):
 <meta property="og:image" content="{DOMAIN}/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#071C17">
-<link rel="icon" type="image/png" href="/img/logo.png">
+<link rel="icon" type="image/png" href="/img/favicon.png">
 {fonts}
 <style>{css}</style>
 {''.join(jsonld(x) for x in extra_ld)}
@@ -150,7 +150,8 @@ def build(mode):
     keys = sorted(set(re.findall(r"\{\{IMG:(\w+)\}\}", body_home)))
     for k in keys:
         shutil.copy(f"photos/{k}.jpg", f"{out}/img/{k}.jpg")
-    shutil.copy("img/logo.png", f"{out}/img/logo.png")
+    for f in ("logo.png", "logo-va.png", "favicon.png"):
+        shutil.copy(f"img/{f}", f"{out}/img/{f}")
     # portada
     home_faq = faq_from_home(body_home)
     faq_ld = {"@context": "https://schema.org", "@type": "FAQPage",

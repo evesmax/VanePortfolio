@@ -188,6 +188,32 @@ p{margin:0}
 .facts tr:last-child td{border-bottom:0}
 .facts th{background:var(--gold-soft);color:var(--ink);font-weight:600}
 .facts td.n{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink);white-space:nowrap}
+.brand .brand-logo{height:46px;width:auto;border-radius:0;display:block}
+@media (max-width:640px){.brand .brand-logo{height:34px}}
+.sim{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:32px;align-items:start}
+@media (max-width:900px){.sim{grid-template-columns:1fr}}
+.sim-q{display:flex;flex-direction:column;gap:18px;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:24px}
+.sq{display:grid;grid-template-columns:34px minmax(0,1fr);gap:6px 12px;align-items:center}
+.sq label{font-size:15.5px}
+.sq .srow,.sq .money{grid-column:2}
+.sn{grid-row:span 2;align-self:start;width:34px;height:34px;border-radius:50%;border:1px solid var(--gold);color:var(--gold-text);display:grid;place-items:center;font-family:var(--f-display);font-size:17px}
+.srow{display:flex;gap:14px;align-items:center}
+.srow input{flex:1;min-width:0;accent-color:#B98C3E}
+.srow output{min-width:72px;text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.sim-r{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:6px;padding:26px;display:flex;flex-direction:column;gap:18px}
+.bars{display:flex;flex-direction:column;gap:14px}
+.brow{display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr) auto;gap:12px;align-items:center;font-size:14px}
+@media (max-width:520px){.brow{grid-template-columns:1fr auto}.brow .btrack{grid-column:1/-1;grid-row:2}}
+.brow span{color:var(--muted)}
+.brow b{font-variant-numeric:tabular-nums;font-size:16px;white-space:nowrap}
+.btrack{height:12px;background:var(--gold-soft);border-radius:999px;overflow:hidden}
+.btrack i{display:block;height:100%;width:0;border-radius:999px;background:#0B2C23;transition:width .5s ease}
+.btrack i.nec{background:#8A6420}
+.btrack i.pen{background:#C2553F}
+.btrack i.vol{background:linear-gradient(90deg,#C9A35B,#E3C580)}
+.analog{font-family:var(--f-display);font-size:clamp(20px,2.2vw,24px);line-height:1.35;color:var(--ink);border-left:2px solid var(--gold);padding-left:16px}
+.sim-cta{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center}
+.share{font-weight:600;font-size:14px}
 .btn-ig{align-self:flex-start;background:transparent;color:var(--ink);border-color:var(--gold)}
 .ico{width:18px;height:18px;flex:none}
 @media (max-width:1180px){.nav{display:none}.top .nav + .btn-photo{margin-left:auto}}
@@ -361,7 +387,7 @@ footer .ans strong{color:var(--on-green)}
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#inicio"><img src="data:image/png;base64,{{LOGO}}" alt=""><span><b>Vanessa Andrade</b><small>Asesor financiero y de seguros</small></span></a>
+    <a class="brand" href="#inicio"><img class="brand-logo" src="data:image/png;base64,{{LOGOVA}}" alt="Vanessa Andrade · Bienestar financiero" width="720" height="227"></a>
     <nav class="nav" aria-label="Secciones">
       <a href="#plan">Cómo funciona</a>
       <a href="#servicios">Servicios</a>
@@ -386,7 +412,7 @@ footer .ans strong{color:var(--on-green)}
         <p class="lede">Te ayudo a aumentar tu pensión del IMSS con Modalidad 40, a ahorrar para tu retiro y a proteger a tu familia, con un plan claro y acompañamiento en cada paso. En Zapopan y en línea en todo México.</p>
         <div class="hero-actions">
           <a class="btn btn-gold" href="https://wa.me/523334655385?text=Hola%20Vanessa%2C%20quiero%20agendar%20mi%20asesor%C3%ADa%20gratis." target="_blank" rel="noopener">Agenda tu asesoría gratis</a>
-          <a class="btn btn-line" href="#diagnostico">Haz tu diagnóstico en 3 minutos</a>
+          <a class="btn btn-line" href="#simulador">Calcula tu pensión en 60 segundos</a>
         </div>
         <p class="script">Te acompaño hoy, para proteger tu mañana.</p>
       </div>
@@ -412,6 +438,40 @@ footer .ans strong{color:var(--on-green)}
         <article class="pcard"><span class="lico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 4v8h4M16 8v12M8 16h4"/></svg></span><h3>Los trámites y las reglas confunden</h3><p>Semanas, leyes, plazos, letras chiquitas. Es fácil tomar una mala decisión cuando nadie te lo explica bien.</p></article>
       </div>
       <p class="belief">Después de tantos años de esfuerzo, mereces retirarte con dignidad y sin miedo al mañana.</p>
+    </div>
+  </section>
+
+  <section class="block alt" id="simulador">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Simulador de pensión</p>
+        <h2>¿Tu pensión te va a alcanzar? Calcúlalo en 60 segundos</h2>
+        <p class="lede">Contesta cuatro preguntas y ve cuánto podrías recibir de tu Afore, cuánto necesitarías para mantener tu nivel de vida y qué cambia si ahorras un poco por tu cuenta.</p>
+      </div>
+      <div class="sim">
+        <form class="sim-q" id="sim" novalidate>
+          <div class="sq"><span class="sn">1</span><label for="s-edad">¿Qué edad tienes?</label><div class="srow"><input id="s-edad" type="range" min="20" max="64" value="35"><output id="s-edad-o" for="s-edad">35 años</output></div></div>
+          <div class="sq"><span class="sn">2</span><label for="s-sal">¿Cuál es tu salario mensual bruto?</label><div class="money"><input id="s-sal" type="number" inputmode="numeric" min="0" step="1000" value="25000"></div></div>
+          <div class="sq"><span class="sn">3</span><label for="s-anios">¿Cuántos años llevas cotizando?</label><div class="srow"><input id="s-anios" type="range" min="0" max="40" value="10"><output id="s-anios-o" for="s-anios">10 años</output></div></div>
+          <div class="sq"><span class="sn">4</span><label for="s-vol">¿Qué % de tu salario ahorrarías por tu cuenta?</label><div class="srow"><input id="s-vol" type="range" min="0" max="20" value="5"><output id="s-vol-o" for="s-vol">5%</output></div></div>
+          <p class="hint">Considera que te retiras a los 65 y que cotizas bajo la Ley 97. Si empezaste a cotizar antes de julio de 1997, tu pensión se calcula distinto: <a href="#diagnostico" data-route="m40">haz el pre-diagnóstico de Modalidad 40</a>.</p>
+        </form>
+        <div class="sim-r" aria-live="polite">
+          <p class="eyebrow">Tu realidad al retirarte</p>
+          <div class="bars">
+            <div class="brow"><span>Tu sueldo hoy</span><div class="btrack"><i id="sb-hoy"></i></div><b id="sv-hoy"></b></div>
+            <div class="brow"><span>Lo que necesitarías (70%)</span><div class="btrack"><i id="sb-nec" class="nec"></i></div><b id="sv-nec"></b></div>
+            <div class="brow"><span>Pensión estimada de tu Afore</span><div class="btrack"><i id="sb-pen" class="pen"></i></div><b id="sv-pen"></b></div>
+            <div class="brow"><span>Con tu ahorro voluntario</span><div class="btrack"><i id="sb-vol" class="vol"></i></div><b id="sv-vol"></b></div>
+          </div>
+          <p class="analog" id="s-analog"></p>
+          <div class="sim-cta">
+            <a class="btn btn-gold" href="#diagnostico">Haz tu diagnóstico completo</a>
+            <a class="share" id="s-share" href="#" target="_blank" rel="noopener">Compartir mi resultado por WhatsApp</a>
+          </div>
+          <p class="hint">Estimación educativa en pesos de hoy: rendimiento real de 3.5% anual, aportaciones obligatorias de 12% del salario y un retiro de 25 años. No incluye el Fondo de Pensiones para el Bienestar ni garantiza rendimientos.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -923,6 +983,36 @@ footer .ans strong{color:var(--on-green)}
     a.href = waLink("Hola Vanessa, me gustaría información sobre: " + a.getAttribute("data-wa") + ".");
     a.target = "_blank"; a.rel = "noopener";
   });
+
+  /*SIM*/
+  function simCalc(edad, sal, anios, vol){
+    var r = 0.035, rp = 0.03, n = Math.max(0, 65 - edad) * 12;
+    var rm = Math.pow(1 + r, 1/12) - 1, rpm = Math.pow(1 + rp, 1/12) - 1;
+    var base = Math.min(sal, 117.31 * 25 * 30.4);
+    var fvF = n > 0 ? (Math.pow(1 + rm, n) - 1) / rm : 0, payF = rpm / (1 - Math.pow(1 + rpm, -300));
+    var previo = anios * 12 * base * 0.065 * Math.pow(1 + r, anios / 2);
+    var fondo = previo * Math.pow(1 + rm, n) + base * 0.12 * fvF;
+    var pen = fondo * payF, extra = sal * vol / 100 * fvF * payF;
+    return {pen: pen, con: pen + extra, nec: sal * 0.7, n: n};
+  }
+  /*ENDSIM*/
+  function renderSim(){
+    var edad = +$("s-edad").value, sal = num("s-sal"), anios = +$("s-anios").value, vol = +$("s-vol").value;
+    if (anios > edad - 15) { anios = Math.max(0, edad - 15); $("s-anios").value = anios; }
+    $("s-edad-o").textContent = edad + " años"; $("s-anios-o").textContent = anios + (anios === 1 ? " año" : " años"); $("s-vol-o").textContent = vol + "%";
+    var x = simCalc(edad, sal, anios, vol), max = Math.max(sal, x.con, 1);
+    [["hoy", sal], ["nec", x.nec], ["pen", x.pen], ["vol", x.con]].forEach(function(p){
+      $("sb-" + p[0]).style.width = Math.max(2, p[1] / max * 100).toFixed(1) + "%"; $("sv-" + p[0]).textContent = money(p[1]);
+    });
+    var pct = sal > 0 ? Math.round(x.pen / sal * 100) : 0, pctV = sal > 0 ? Math.round(x.con / sal * 100) : 0;
+    var txt = sal <= 0 ? "Escribe tu salario para ver tu resultado."
+      : "Hoy ganas " + money(sal) + ". Solo con tu Afore vivirías con unos " + money(x.pen) + " al mes: es como si de cada 10 pesos que hoy recibes, te quedaran " + Math.max(0, Math.round(pct / 10)) + "." + (vol > 0 ? " Ahorrando " + vol + "% por tu cuenta, llegarías a " + pctV + "% de tu sueldo." : "");
+    $("s-analog").textContent = txt;
+    $("s-share").href = "https://wa.me/?text=" + encodeURIComponent("Calculé mi pensión: solo con mi Afore viviría con el " + pct + "% de mi sueldo. ¿Y tú? Calcula la tuya en 60 segundos: https://vaneandrade.com/#simulador");
+  }
+  ["input","change"].forEach(function(ev){ $("sim").addEventListener(ev, renderSim); });
+  $("sim").addEventListener("submit", function(e){ e.preventDefault(); });
+  renderSim();
 
   var OK_MSG = "Recibí tu mensaje en mi correo. Te contesto en menos de 24 horas hábiles.";
   var FAIL_MSG = "No pude enviar tu mensaje por correo en este momento. Envíamelo por WhatsApp y te contesto igual.";
