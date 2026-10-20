@@ -59,7 +59,7 @@ PAGES = [
 "faq": [
 ("¿Puedo estar en Modalidad 40 si tengo trabajo?", "No mientras tengas empleo con IMSS. Puedes inscribirte cuando termine tu relación laboral, y conviene planear ese momento."),
 ("¿Qué documentos necesito para la asesoría?", "Tu Constancia de semanas cotizadas. La descargas en el sitio del IMSS con tu CURP y tu número de seguridad social."),
-("¿La Modalidad 40 sirve si empecé a cotizar después de 1997?", "Te suma semanas, pero no sube tu pensión como en la Ley 73. En ese caso suele convenir más un Plan Personal de Retiro."),
+("¿La Modalidad 40 me conviene si empecé a cotizar después de 1997?", "Por lo general, no. El beneficio de subir tu pensión con Modalidad 40 es para quienes se pensionan por la Ley 73. Si empezaste a cotizar después de julio de 1997, la ley también te permite inscribirte, pero tus pagos solo suman semanas y saldo en tu Afore: no suben tu pensión como en la Ley 73. En tu caso suele convenir más un Plan Personal de Retiro."),
 ],
 },
 {
