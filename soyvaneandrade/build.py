@@ -20,7 +20,7 @@ css += """
 body{margin:0} img{max-width:100%}
 .page-hero .btn-line{color:#F4F0E6}
 .legal-page{max-width:820px;display:flex;flex-direction:column;gap:14px}
-.legal-page h1{font-size:clamp(34px,5vw,48px)}
+.legal-page h1{font-size:clamp(30px,4.2vw,42px)}
 .crumbs-l{font-size:13px;color:var(--muted)}
 .upd{color:var(--muted);font-size:14px;margin-bottom:10px}
 """
