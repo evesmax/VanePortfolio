@@ -53,8 +53,8 @@ BUSINESS = {
     "image": DOMAIN + "/img/og.jpg",
     "logo": DOMAIN + "/img/logo-va.png",
     "telephone": "+52 33 3465 5385",
-    "address": {"@type": "PostalAddress", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "addressCountry": "MX"},
-    "areaServed": [{"@type": "City", "name": "Zapopan"}, {"@type": "City", "name": "Guadalajara"}, {"@type": "Country", "name": "México"}],
+    "address": {"@type": "PostalAddress", "addressLocality": "Guadalajara", "addressRegion": "Jalisco", "addressCountry": "MX"},
+    "areaServed": [{"@type": "AdministrativeArea", "name": "Zona Metropolitana de Guadalajara"}, {"@type": "City", "name": "Guadalajara"}, {"@type": "City", "name": "Zapopan"}, {"@type": "City", "name": "Tlaquepaque"}, {"@type": "City", "name": "Tonalá"}, {"@type": "City", "name": "Tlajomulco de Zúñiga"}, {"@type": "City", "name": "Zapotlanejo"}, {"@type": "Country", "name": "México"}],
     "sameAs": ["https://www.instagram.com/soyvaneandrade", "https://www.facebook.com/profile.php?id=61586427656629"],
     "knowsAbout": ["Modalidad 40 IMSS", "Pensión Ley 73", "Plan Personal de Retiro", "Inversión deducible de impuestos", "Seguro de vida", "Seguro de gastos médicos mayores", "Seguro educativo", "Seguro de auto"],
     "priceRange": "Primera asesoría sin costo",
@@ -187,8 +187,8 @@ def build(mode):
         body = body_home.replace(preview_banner, "")
         for k in keys:
             body = body.replace("{{IMG:%s}}" % k, f"img/{k}.jpg")
-        doc = head("Asesora en Modalidad 40, retiro y seguros en Zapopan | Vanessa Andrade",
-                   "Mejora tu pensión del IMSS con Modalidad 40, ahorra para tu retiro con un PPR y protege a tu familia. Diagnóstico gratis y asesoría en Zapopan, Guadalajara y en línea.",
+        doc = head("Asesora en Modalidad 40, retiro y seguros en Guadalajara | Vanessa Andrade",
+                   "Mejora tu pensión del IMSS con Modalidad 40, ahorra para tu retiro con un PPR y protege a tu familia. Diagnóstico gratis y asesoría en Guadalajara y su zona metropolitana, a domicilio o en línea.",
                    "/", [BUSINESS, faq_ld]) + links(body, "site") + "\n</body>\n</html>\n"
     else:
         doc = src[:src.index("</style>") + 8].replace("{{", "{{")  # cabecera original de la vista previa

@@ -4,14 +4,14 @@
 AVISO = {
 "slug": "aviso-de-privacidad",
 "title": "Aviso de privacidad | Vanessa Andrade",
-"description": "Aviso de privacidad integral de Vanessa Andrade, asesora financiera y agente de seguros en Zapopan, Jalisco.",
+"description": "Aviso de privacidad integral de Vanessa Andrade, asesora financiera y agente de seguros en Guadalajara, Jalisco.",
 "h1": "Aviso de privacidad",
 "updated": "20 de octubre de 2026",
 "body": """
 <p>Este aviso explica qué datos personales recabo, para qué los uso, con quién los comparto y cómo puedes ejercer tus derechos, conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.</p>
 
 <h2>1. Responsable de tus datos</h2>
-<p><strong>[Nombre completo como aparece en tu identificación]</strong> ("Vanessa Andrade"), asesora financiera y agente de seguros, con domicilio en <strong>[calle, número, colonia y código postal]</strong>, Zapopan, Jalisco, México, es responsable del tratamiento de tus datos personales.</p>
+<p><strong>[Nombre completo como aparece en tu identificación]</strong> ("Vanessa Andrade"), asesora financiera y agente de seguros, con domicilio en <strong>[calle, número, colonia y código postal]</strong>, Guadalajara, Jalisco, México, es responsable del tratamiento de tus datos personales.</p>
 <p>Para cualquier asunto relacionado con tus datos, escríbeme a <strong>asesorvaneandrade@gmail.com</strong>.</p>
 
 <h2>2. Datos personales que recabo</h2>

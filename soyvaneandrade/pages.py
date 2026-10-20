@@ -4,8 +4,8 @@
 PAGES = [
 {
 "slug": "modalidad-40",
-"title": "Modalidad 40 en Zapopan y Guadalajara: mejora tu pensión del IMSS | Vanessa Andrade",
-"description": "Asesoría en Modalidad 40 del IMSS: requisitos, cuánto pagarías en 2026 y cuánto podría aumentar tu pensión. Primera sesión gratis en Zapopan y en línea.",
+"title": "Modalidad 40 en Guadalajara: mejora tu pensión del IMSS | Vanessa Andrade",
+"description": "Asesoría en Modalidad 40 del IMSS: requisitos, cuánto pagarías en 2026 y cuánto podría aumentar tu pensión. Primera sesión gratis en Guadalajara, a domicilio o en línea.",
 "img": "m40", "pos": "center 40%",
 "eyebrow": "Modalidad 40 · Ley 73",
 "h1": "Modalidad 40: mejora tu pensión del IMSS",
@@ -64,8 +64,8 @@ PAGES = [
 },
 {
 "slug": "plan-personal-de-retiro",
-"title": "Plan Personal de Retiro (PPR) deducible en Zapopan | Vanessa Andrade",
-"description": "Complementa tu Afore con un Plan Personal de Retiro y deduce tus aportaciones. Opciones de MetLife, Allianz y Skandia. Asesoría gratis en Zapopan y en línea.",
+"title": "Plan Personal de Retiro (PPR) deducible en Guadalajara | Vanessa Andrade",
+"description": "Complementa tu Afore con un Plan Personal de Retiro y deduce tus aportaciones. Opciones de MetLife, Allianz y Skandia. Asesoría gratis en Guadalajara, a domicilio o en línea.",
 "img": "ppr", "pos": "35% center",
 "eyebrow": "Plan Personal de Retiro",
 "h1": "Complementa tu Afore y deduce impuestos con un PPR",
@@ -106,8 +106,8 @@ PAGES = [
 },
 {
 "slug": "seguro-de-vida",
-"title": "Seguro de vida en Zapopan: protege a tu familia | Vanessa Andrade",
-"description": "Calcula la suma asegurada que necesita tu familia y compara seguros de vida de MetLife, Allianz y Skandia. Asesoría gratis en Zapopan y en línea.",
+"title": "Seguro de vida en Guadalajara: protege a tu familia | Vanessa Andrade",
+"description": "Calcula la suma asegurada que necesita tu familia y compara seguros de vida de MetLife, Allianz y Skandia. Asesoría gratis en Guadalajara, a domicilio o en línea.",
 "img": "familia", "pos": "center 30%",
 "eyebrow": "Seguro de vida",
 "h1": "Protege a tu familia, pase lo que pase",
