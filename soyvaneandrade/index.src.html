@@ -96,6 +96,7 @@ p{margin:0}
 .svc.has-photo h3{color:#F4F0E6}
 .svc.has-photo p{color:#CBD5CF;flex:0 0 auto}
 .svc.has-photo a:not(.btn){color:#E3C580}
+.svc-tag{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#E3C580;margin-bottom:-4px}
 .svc.has-photo .ic{color:#E3C580;border-color:#E3C580;background:rgba(7,28,23,.55)}
 .svc.feature.has-photo{grid-template-columns:minmax(0,600px);min-height:380px;padding:clamp(28px,4vw,48px);
   background:linear-gradient(90deg,rgba(7,28,23,.96) 0%,rgba(7,28,23,.85) 45%,rgba(7,28,23,.15) 100%),var(--img) var(--pos,center)/cover no-repeat,#071C17}
@@ -528,40 +529,46 @@ footer .ans strong{color:var(--on-green)}
           
         </article>
         <article class="svc has-photo" style="--img:url({{IMG:ppr}});--pos:35% center">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="12" r="6.5"/><path d="M17 9.5c1.8.3 3 1.3 3 2.5M11 9.5v5M9.3 10.5c0-.6.8-1 1.7-1s1.7.4 1.7 1-.8 1-1.7 1.2-1.7.6-1.7 1.3.8 1 1.7 1 1.7-.4 1.7-1"/><path d="M7 18l-1 3M15 18l1 3"/></svg></div>
-          <h3>Planes para el retiro</h3>
-          <p>Plan Personal de Retiro (PPR) para complementar tu Afore, con aportaciones que puedes deducir en tu declaración anual.</p>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 11a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/><path d="M12 8v6M10 9.5c0-.6.9-1 2-1s2 .4 2 1-.9 1-2 1.2-2 .6-2 1.3.9 1 2 1 2-.4 2-1"/><path d="M8 18l-1 3M16 18l1 3"/></svg></div>
+          <span class="svc-tag">Retiro e inversión</span>
+          <h3>PPR deducible de impuestos</h3>
+          <p>Ahorra para tu retiro con un Plan Personal de Retiro y deduce tus aportaciones en tu declaración anual.</p>
           <a href="{{L:plan-personal-de-retiro}}">Más información</a>
         </article>
-        <article class="svc has-photo" style="--img:url({{IMG:plan}})">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M8.5 10l1.5 1.5L13 8.5M8.5 16l1.5 1.5L13 14.5M15 10.5h1.5M15 16.5h1.5"/></svg></div>
-          <h3>Planificación financiera</h3>
-          <p>Organizamos tu dinero, tus deudas y tu ahorro para que alcances tus metas.</p>
-          <a href="#" data-wa="Planificación financiera">Más información</a>
-        </article>
-        <article class="svc has-photo" style="--img:url({{IMG:salud}});--pos:28% center">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 20s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.6-7.5 10-7.5 10Z"/><path d="M6 12h3l1.5-2.5 2 4 1.5-1.5H18"/></svg></div>
-          <h3>Seguros personales</h3>
-          <p>Seguro de vida y de gastos médicos para proteger lo más importante: tu vida y tu salud.</p>
-          <a href="{{L:seguro-de-vida}}">Más información</a>
+        <article class="svc has-photo" style="--img:url({{IMG:ahorro}})">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V15M9 20v-7M14 20v-4M19 20V9"/><path d="m4 11 5-4 4 3 6-5M15 5h4v4"/></svg></div>
+          <span class="svc-tag">Retiro e inversión</span>
+          <h3>Inversión deducible de impuestos</h3>
+          <p>Haz crecer tu dinero con planes de inversión de Allianz y Skandia que además te ayudan a pagar menos impuestos.</p>
+          <a href="#" data-wa="Inversión deducible de impuestos">Más información</a>
         </article>
         <article class="svc has-photo" style="--img:url({{IMG:familia}});--pos:center 30%">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="6.5" r="2.5"/><circle cx="16" cy="6.5" r="2.5"/><path d="M4 20v-6a4 4 0 0 1 8 0v6M12 20v-6a4 4 0 0 1 8 0v6"/></svg></div>
-          <h3>Protección familiar</h3>
-          <p>Seguro de vida y de gastos médicos mayores para que tu familia esté respaldada si tú faltas o si llega una enfermedad o un accidente.</p>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.6-7.5 10-7.5 10Z"/></svg></div>
+          <span class="svc-tag">Protección familiar</span>
+          <h3>Seguro de vida</h3>
+          <p>Con o sin recuperación de primas: protege a tu familia y, si lo eliges, recupera lo que pagaste al terminar el plazo.</p>
           <a href="{{L:seguro-de-vida}}">Más información</a>
         </article>
-        <article class="svc has-photo" style="--img:url({{IMG:casa}})">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5h4v5"/></svg></div>
-          <h3>Seguros patrimoniales</h3>
-          <p>Protegemos tu casa, tu auto y tus bienes ante cualquier imprevisto.</p>
-          <a href="#" data-wa="Seguros patrimoniales">Más información</a>
+        <article class="svc has-photo" style="--img:url({{IMG:salud}});--pos:28% center">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M9 6V4h6v2M12 10v6M9 13h6"/></svg></div>
+          <span class="svc-tag">Protección familiar</span>
+          <h3>Gastos médicos mayores</h3>
+          <p>Para que una enfermedad o un accidente no acabe con tus ahorros: hospital, cirugías y tratamientos cubiertos.</p>
+          <a href="#" data-wa="Seguro de gastos médicos mayores">Más información</a>
         </article>
-        <article class="svc has-photo" style="--img:url({{IMG:ahorro}})">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 20V15M9 20v-7M14 20v-4M19 20V9"/><path d="m4 11 5-4 4 3 6-5M15 5h4v4"/></svg></div>
-          <h3>Ahorro e inversión</h3>
-          <p>Hacemos crecer tu dinero de forma inteligente, según tus metas y el tiempo que tienes.</p>
-          <a href="#" data-wa="Ahorro e inversión">Más información</a>
+        <article class="svc has-photo" style="--img:url({{IMG:header}});--pos:center 45%">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2.5 9 9.5-5 9.5 5-9.5 5-9.5-5Z"/><path d="M6.5 11v5c1.5 1.5 3.5 2.2 5.5 2.2s4-.7 5.5-2.2v-5M21.5 9v5"/></svg></div>
+          <span class="svc-tag">Protección familiar</span>
+          <h3>Seguro educativo</h3>
+          <p>Asegura la universidad de tus hijos: juntas el dinero poco a poco y, si tú faltas, su educación sigue protegida.</p>
+          <a href="#" data-wa="Seguro educativo">Más información</a>
+        </article>
+        <article class="svc has-photo" style="--img:url({{IMG:road}});--pos:center 70%">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3.5 16h17v3h-17zM7 19v1.5M17 19v1.5"/><circle cx="7.5" cy="13" r="1"/><circle cx="16.5" cy="13" r="1"/></svg></div>
+          <span class="svc-tag">Patrimonio</span>
+          <h3>Seguro de auto</h3>
+          <p>Protege tu coche y tu responsabilidad ante terceros, con la cobertura que se ajusta a ti.</p>
+          <a href="#" data-wa="Seguro de auto">Más información</a>
         </article>
       </div>
     </div>
@@ -822,12 +829,12 @@ footer .ans strong{color:var(--on-green)}
         <div class="field full"><label for="c-tema">¿En qué te ayudo?</label>
           <select id="c-tema">
             <option>Modalidad 40</option>
-            <option>Plan para el retiro (PPR)</option>
+            <option>PPR deducible de impuestos</option>
+            <option>Inversión deducible de impuestos</option>
             <option>Seguro de vida</option>
-            <option>Seguro de gastos médicos</option>
-            <option>Seguro de casa o auto</option>
-            <option>Ahorro e inversión</option>
-            <option>Planificación financiera</option>
+            <option>Gastos médicos mayores</option>
+            <option>Seguro educativo</option>
+            <option>Seguro de auto</option>
             <option>Otro</option>
           </select>
         </div>

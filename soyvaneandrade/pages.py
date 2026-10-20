@@ -127,11 +127,12 @@ PAGES = [
 <h2>Tipos de seguro de vida</h2>
 <ul>
 <li><strong>Temporal:</strong> te protege por un plazo definido. Es la opción más económica para tener una suma asegurada alta.</li>
+<li><strong>Con recuperación de primas:</strong> si al terminar el plazo no utilizaste el seguro, te regresan una parte o el total de lo que pagaste, según el plan.</li>
 <li><strong>Con ahorro:</strong> además de protegerte, va juntando un ahorro que puedes usar en el futuro.</li>
 </ul>
 
 <h2>Cómo te ayudo</h2>
-<p>Soy distribuidora autorizada de <strong>MetLife, Allianz y Skandia</strong>. Calculamos tu suma asegurada, comparo opciones entre las aseguradoras y te explico qué cubre cada póliza, sin letras chiquitas. También te asesoro en seguros de gastos médicos y de casa o auto.</p>
+<p>Soy distribuidora autorizada de <strong>MetLife, Allianz y Skandia</strong>. Calculamos tu suma asegurada, comparo opciones entre las aseguradoras y te explico qué cubre cada póliza, sin letras chiquitas. También te asesoro en seguros de gastos médicos mayores, educativos y de auto.</p>
 """,
 "faq": [
 ("¿Cuánto cuesta un seguro de vida?", "Depende de tu edad, tu salud, si fumas y la suma asegurada. Te preparo una cotización oficial sin compromiso."),

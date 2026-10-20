@@ -56,7 +56,7 @@ BUSINESS = {
     "address": {"@type": "PostalAddress", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "addressCountry": "MX"},
     "areaServed": [{"@type": "City", "name": "Zapopan"}, {"@type": "City", "name": "Guadalajara"}, {"@type": "Country", "name": "México"}],
     "sameAs": ["https://www.instagram.com/soyvaneandrade", "https://www.facebook.com/profile.php?id=61586427656629"],
-    "knowsAbout": ["Modalidad 40 IMSS", "Pensión Ley 73", "Plan Personal de Retiro", "Seguro de vida", "Seguro de gastos médicos"],
+    "knowsAbout": ["Modalidad 40 IMSS", "Pensión Ley 73", "Plan Personal de Retiro", "Inversión deducible de impuestos", "Seguro de vida", "Seguro de gastos médicos mayores", "Seguro educativo", "Seguro de auto"],
     "priceRange": "Primera asesoría sin costo",
 }
 
