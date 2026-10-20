@@ -207,16 +207,49 @@ p{margin:0}
 .srow input{flex:1;min-width:0;accent-color:#B98C3E}
 .srow output{min-width:72px;text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
 .sim-r{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:6px;padding:26px;display:flex;flex-direction:column;gap:18px}
+.sl{font-weight:600;font-size:15.5px}
+.seg2{grid-column:2;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+@media (max-width:520px){.seg2{grid-template-columns:1fr}}
+.seg2 label{display:flex;align-items:center;justify-content:center;text-align:center;font-size:13.5px;font-weight:600;line-height:1.3;padding:10px;border:1px solid var(--line);border-radius:4px;background:var(--surface);cursor:pointer;min-height:48px}
+.seg2 input{position:absolute;opacity:0;pointer-events:none}
+.seg2 label:has(input:checked){border-color:var(--gold);background:var(--gold-soft);box-shadow:inset 0 0 0 1px var(--gold)}
+.seg2 label:has(input:focus-visible){outline:3px solid var(--gold)}
+.sim-top{display:grid;grid-template-columns:150px minmax(0,1fr);gap:22px;align-items:center}
+@media (max-width:440px){.sim-top{grid-template-columns:120px minmax(0,1fr);gap:14px}}
+.gauge{position:relative;width:100%;aspect-ratio:1}
+.gauge svg{width:100%;height:100%;transform:rotate(-90deg)}
+.gauge circle{fill:none;stroke-width:13;stroke-linecap:round;transition:stroke-dasharray .7s ease}
+.g-track{stroke:#F1E3DC}
+.g-pen{stroke:#C8472A;stroke-dasharray:0 400}
+.g-vol{stroke:#2F8F5B;stroke-dasharray:0 400}
+.g-txt{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.g-txt b{font-size:32px;font-weight:700;color:#C8472A;line-height:1;font-variant-numeric:tabular-nums}
+.g-txt span{font-size:11.5px;color:var(--muted);margin-top:4px}
+.sim-big{display:flex;flex-direction:column;gap:2px;min-width:0}
+.sim-big span{font-size:14px;color:var(--muted)}
+.sim-big b{font-size:clamp(30px,4vw,40px);font-weight:700;color:var(--ink);line-height:1.1;font-variant-numeric:tabular-nums}
+.gap-pill{margin-top:10px;align-self:flex-start;background:#FBE6DF;color:#9B2F17;font-weight:600;font-size:14.5px;padding:8px 12px;border-radius:4px}
+.gap-pill b{font-size:inherit;color:#9B2F17}
+.win{background:#E4F3EA;color:#1D5E3B;border-radius:4px;padding:12px 14px;font-size:15px;line-height:1.5}
+.win b{color:#14482D}
+.btn-big{padding:16px 26px;font-size:16px}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--gold)}
+.t-pen{color:#C8472A}.t-vol{color:#2F8F5B}
+.l73{display:flex;flex-direction:column;gap:10px;background:var(--gold-soft);border-radius:4px;padding:18px}
+.l73 b{font-size:18px;color:var(--ink)}
+.l73 p,.l73 li{font-size:15px;color:var(--ink)}
+.l73 ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
 .bars{display:flex;flex-direction:column;gap:14px}
 .brow{display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr) auto;gap:12px;align-items:center;font-size:14px}
 @media (max-width:520px){.brow{grid-template-columns:1fr auto}.brow .btrack{grid-column:1/-1;grid-row:2}}
 .brow span{color:var(--muted)}
 .brow b{font-variant-numeric:tabular-nums;font-size:16px;white-space:nowrap}
-.btrack{height:12px;background:var(--gold-soft);border-radius:999px;overflow:hidden}
+.btrack{height:14px;background:var(--gold-soft);border-radius:999px;overflow:hidden}
 .btrack i{display:block;height:100%;width:0;border-radius:999px;background:#0B2C23;transition:width .5s ease}
-.btrack i.nec{background:#8A6420}
-.btrack i.pen{background:#C2553F}
-.btrack i.vol{background:linear-gradient(90deg,#C9A35B,#E3C580)}
+.btrack i.nec{background:#B98C3E}
+.btrack i.pen{background:#C8472A}
+.btrack i.vol{background:#2F8F5B}
 .analog{font-family:var(--f-body);font-size:16.5px;font-weight:500;line-height:1.6;color:var(--ink);border-left:2px solid var(--gold);padding-left:16px}
 .sim-cta{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center}
 .share{font-weight:600;font-size:14px}
@@ -347,9 +380,9 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none;bo
 .faq{max-width:860px}
 details{border-bottom:1px solid var(--line)}
 details:first-of-type{border-top:1px solid var(--line)}
-summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;padding:20px 0;font-family:var(--f-display);font-weight:500;font-size:18px}
+summary{list-style:none;cursor:pointer;display:block;position:relative;padding:20px 36px 20px 0;overflow-wrap:anywhere;font-family:var(--f-display);font-weight:500;font-size:18px}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--gold-text);font-size:26px;line-height:1;transition:transform .2s}
+summary::after{content:"+";position:absolute;right:4px;top:18px;color:var(--gold-text);font-size:26px;line-height:1;transition:transform .2s}
 details[open] summary::after{transform:rotate(45deg)}
 .ans{padding:0 0 22px;display:flex;flex-direction:column;gap:10px;color:var(--muted);max-width:68ch}
 .ans strong{color:var(--ink)}
@@ -450,30 +483,72 @@ footer .ans strong{color:var(--on-green)}
       <div class="sec-head">
         <p class="eyebrow">Simulador de pensión</p>
         <h2>¿Tu pensión te va a alcanzar? Calcúlalo en 60 segundos</h2>
-        <p class="lede">Contesta cuatro preguntas y ve cuánto podrías recibir de tu Afore, cuánto necesitarías para mantener tu nivel de vida y qué cambia si ahorras un poco por tu cuenta.</p>
+        <p class="lede">Contesta unas preguntas y ve al instante cuánto podrías recibir de tu Afore, cuánto necesitarías para mantener tu nivel de vida y qué cambia si ahorras un poco por tu cuenta.</p>
       </div>
       <div class="sim">
         <form class="sim-q" id="sim" novalidate>
-          <div class="sq"><span class="sn">1</span><label for="s-edad">¿Qué edad tienes?</label><div class="srow"><input id="s-edad" type="range" min="20" max="64" value="35"><output id="s-edad-o" for="s-edad">35 años</output></div></div>
-          <div class="sq"><span class="sn">2</span><label for="s-sal">¿Cuál es tu salario mensual bruto?</label><div class="money"><input id="s-sal" type="number" inputmode="numeric" min="0" step="1000" value="25000"></div></div>
-          <div class="sq"><span class="sn">3</span><label for="s-anios">¿Cuántos años llevas cotizando?</label><div class="srow"><input id="s-anios" type="range" min="0" max="40" value="10"><output id="s-anios-o" for="s-anios">10 años</output></div></div>
-          <div class="sq"><span class="sn">4</span><label for="s-vol">¿Qué % de tu salario ahorrarías por tu cuenta?</label><div class="srow"><input id="s-vol" type="range" min="0" max="20" value="5"><output id="s-vol-o" for="s-vol">5%</output></div></div>
-          <p class="hint">Considera que te retiras a los 65 y que cotizas bajo la Ley 97. Si empezaste a cotizar antes de julio de 1997, tu pensión se calcula distinto: <a href="#diagnostico" data-route="m40">haz el pre-diagnóstico de Modalidad 40</a>.</p>
+          <div class="sq"><span class="sn">1</span><span class="sl" id="s-reg-l">¿Cuándo empezaste a cotizar en el IMSS?</span>
+            <div class="seg2" role="radiogroup" aria-labelledby="s-reg-l">
+              <label><input type="radio" name="s-reg" id="s-reg-97" value="97" checked>Después de julio de 1997 o no cotizo</label>
+              <label><input type="radio" name="s-reg" id="s-reg-73" value="73">Antes de julio de 1997</label>
+            </div>
+          </div>
+          <div class="sq"><span class="sn">2</span><label for="s-edad">¿Qué edad tienes?</label><div class="srow"><input id="s-edad" type="range" min="20" max="64" value="35"><output id="s-edad-o" for="s-edad">35 años</output></div></div>
+          <div class="sq"><span class="sn">3</span><label for="s-sal">¿Cuál es tu salario mensual bruto?</label><div class="money"><input id="s-sal" type="number" inputmode="numeric" min="0" step="1000" value="25000"></div></div>
+          <div class="sq s97"><span class="sn">4</span><label for="s-anios">¿Cuántos años llevas cotizando?</label><div class="srow"><input id="s-anios" type="range" min="0" max="40" value="10"><output id="s-anios-o" for="s-anios">10 años</output></div></div>
+          <div class="sq s97"><span class="sn">5</span><label for="s-vol">¿Qué % de tu salario ahorrarías por tu cuenta?</label><div class="srow"><input id="s-vol" type="range" min="0" max="20" value="5"><output id="s-vol-o" for="s-vol">5%</output></div></div>
         </form>
+
         <div class="sim-r" aria-live="polite">
-          <p class="eyebrow">Tu realidad al retirarte</p>
-          <div class="bars">
-            <div class="brow"><span>Tu sueldo hoy</span><div class="btrack"><i id="sb-hoy"></i></div><b id="sv-hoy"></b></div>
-            <div class="brow"><span>Lo que necesitarías (70%)</span><div class="btrack"><i id="sb-nec" class="nec"></i></div><b id="sv-nec"></b></div>
-            <div class="brow"><span>Pensión estimada de tu Afore</span><div class="btrack"><i id="sb-pen" class="pen"></i></div><b id="sv-pen"></b></div>
-            <div class="brow"><span>Con tu ahorro voluntario</span><div class="btrack"><i id="sb-vol" class="vol"></i></div><b id="sv-vol"></b></div>
-          </div>
-          <p class="analog" id="s-analog"></p>
-          <div class="sim-cta">
-            <a class="btn btn-gold" href="#diagnostico">Haz tu diagnóstico completo</a>
+          <div id="r97">
+            <p class="eyebrow">Tu realidad al retirarte</p>
+            <div class="sim-top">
+              <div class="gauge">
+                <svg viewBox="0 0 120 120" aria-hidden="true">
+                  <circle cx="60" cy="60" r="50" class="g-track"/>
+                  <circle cx="60" cy="60" r="50" class="g-vol" id="g-vol"/>
+                  <circle cx="60" cy="60" r="50" class="g-pen" id="g-pen"/>
+                </svg>
+                <div class="g-txt"><b id="g-pct">0%</b><span>de tu sueldo</span></div>
+              </div>
+              <div class="sim-big">
+                <span>Tu Afore te daría</span>
+                <b id="big-pen">$0</b>
+                <span>al mes</span>
+                <p class="gap-pill">Te faltarían <b id="big-gap">$0</b> al mes</p>
+              </div>
+            </div>
+            <div class="bars">
+              <div class="brow"><span>Tu sueldo hoy</span><div class="btrack"><i id="sb-hoy"></i></div><b id="sv-hoy"></b></div>
+              <div class="brow"><span>Lo que necesitarías</span><div class="btrack"><i id="sb-nec" class="nec"></i></div><b id="sv-nec"></b></div>
+              <div class="brow"><span>Solo con tu Afore</span><div class="btrack"><i id="sb-pen" class="pen"></i></div><b id="sv-pen" class="t-pen"></b></div>
+              <div class="brow"><span>Con tu ahorro voluntario</span><div class="btrack"><i id="sb-vol" class="vol"></i></div><b id="sv-vol" class="t-vol"></b></div>
+            </div>
+            <p class="win" id="s-win"></p>
+            <div class="sim-cta">
+              <a class="btn btn-gold btn-big" id="s-wa" href="#" target="_blank" rel="noopener">Quiero cerrar mi brecha</a>
+              <a class="btn btn-ghost" href="#diagnostico" data-route="rx">Hacer diagnóstico completo</a>
+            </div>
             <a class="share" id="s-share" href="#" target="_blank" rel="noopener">Compartir mi resultado por WhatsApp</a>
+            <p class="hint">Estimación educativa en pesos de hoy: rendimiento real de 3.5% anual, aportaciones obligatorias de 12% del salario, retiro a los 65 y durante 25 años. No incluye el Fondo de Pensiones para el Bienestar ni garantiza rendimientos.</p>
           </div>
-          <p class="hint">Estimación educativa en pesos de hoy: rendimiento real de 3.5% anual, aportaciones obligatorias de 12% del salario y un retiro de 25 años. No incluye el Fondo de Pensiones para el Bienestar ni garantiza rendimientos.</p>
+
+          <div id="r73" hidden>
+            <p class="eyebrow">Ley 73</p>
+            <div class="l73">
+              <b>Tu pensión se calcula distinto, y todavía puedes mejorarla.</b>
+              <p>Si empezaste a cotizar antes de julio de 1997, el IMSS calcula tu pensión con tus semanas cotizadas y tu salario promedio de los últimos 5 años. Con la <strong>Modalidad 40</strong> puedes subir ese promedio y sumar semanas.</p>
+              <ul>
+                <li>Desde los 60 años recibes el 75% de tu pensión; a los 65, el 100%.</li>
+                <li>Necesitas al menos 500 semanas cotizadas.</li>
+                <li>El momento en que empiezas Modalidad 40 cambia mucho el resultado.</li>
+              </ul>
+            </div>
+            <div class="sim-cta">
+              <a class="btn btn-gold btn-big" href="#diagnostico" data-route="m40">Ver si me conviene Modalidad 40</a>
+              <a class="btn btn-ghost" id="s-wa73" href="#" target="_blank" rel="noopener">Hablar con Vanessa</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1004,17 +1079,29 @@ footer .ans strong{color:var(--on-green)}
   }
   /*ENDSIM*/
   function renderSim(){
+    var l73 = $("s-reg-73").checked;
+    document.querySelectorAll("#sim .s97").forEach(function(el){ el.hidden = l73; });
+    $("r97").hidden = l73; $("r73").hidden = !l73;
     var edad = +$("s-edad").value, sal = num("s-sal"), anios = +$("s-anios").value, vol = +$("s-vol").value;
     if (anios > edad - 15) { anios = Math.max(0, edad - 15); $("s-anios").value = anios; }
     $("s-edad-o").textContent = edad + " años"; $("s-anios-o").textContent = anios + (anios === 1 ? " año" : " años"); $("s-vol-o").textContent = vol + "%";
+    $("s-wa73").href = waLink("Hola Vanessa, empecé a cotizar antes de 1997. Tengo " + edad + " años y gano " + money(sal) + " al mes. Me gustaría saber si me conviene la Modalidad 40.");
+    if (l73) return;
     var x = simCalc(edad, sal, anios, vol), max = Math.max(sal, x.con, 1);
     [["hoy", sal], ["nec", x.nec], ["pen", x.pen], ["vol", x.con]].forEach(function(p){
       $("sb-" + p[0]).style.width = Math.max(2, p[1] / max * 100).toFixed(1) + "%"; $("sv-" + p[0]).textContent = money(p[1]);
     });
     var pct = sal > 0 ? Math.round(x.pen / sal * 100) : 0, pctV = sal > 0 ? Math.round(x.con / sal * 100) : 0;
-    var txt = sal <= 0 ? "Escribe tu salario para ver tu resultado."
-      : "Hoy ganas " + money(sal) + ". Solo con tu Afore vivirías con unos " + money(x.pen) + " al mes: es como si de cada 10 pesos que hoy recibes, te quedaran " + Math.max(0, Math.round(pct / 10)) + "." + (vol > 0 ? " Ahorrando " + vol + "% por tu cuenta, llegarías a " + pctV + "% de tu sueldo." : "");
-    $("s-analog").textContent = txt;
+    var C = 2 * Math.PI * 50, f = function(p){ return Math.max(0, Math.min(100, p)) / 100 * C; };
+    $("g-pen").style.strokeDasharray = f(pct) + " " + C; $("g-vol").style.strokeDasharray = f(pctV) + " " + C;
+    $("g-pct").textContent = pct + "%";
+    $("big-pen").textContent = money(x.pen);
+    var gap = Math.max(0, x.nec - x.pen);
+    $("big-gap").textContent = money(gap);
+    $("s-win").innerHTML = sal <= 0 ? "Escribe tu salario para ver tu resultado."
+      : vol > 0 ? "Ahorrando <b>" + vol + "%</b> por tu cuenta subirías a <b>" + money(x.con) + "</b> al mes: <b>" + money(x.con - x.pen) + " más</b>, el " + pctV + "% de tu sueldo."
+      : "Mueve la última pregunta y ve cuánto cambia tu retiro si ahorras un poco por tu cuenta.";
+    $("s-wa").href = waLink("Hola Vanessa, hice el simulador de pensión. Tengo " + edad + " años y gano " + money(sal) + ". Solo con mi Afore recibiría unos " + money(x.pen) + " al mes (" + pct + "% de mi sueldo) y me faltarían " + money(gap) + ". Quiero saber cómo cerrar esa brecha.");
     $("s-share").href = "https://wa.me/?text=" + encodeURIComponent("Calculé mi pensión: solo con mi Afore viviría con el " + pct + "% de mi sueldo. ¿Y tú? Calcula la tuya en 60 segundos: https://vaneandrade.com/#simulador");
   }
   ["input","change"].forEach(function(ev){ $("sim").addEventListener(ev, renderSim); });
