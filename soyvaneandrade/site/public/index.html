@@ -31,18 +31,9 @@
   --f-body:"Montserrat", "Segoe UI", system-ui, sans-serif;
   --f-script:"Allura", "Snell Roundhand", cursive;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#08150F; --surface:#0D211B; --ink:#ECE8DE; --muted:#A3B1AA; --line:#21392F;
-  --green:#071C17; --green-2:#0E2C24; --green-line:#24453A; --on-green:#EEEAE0; --on-green-dim:#A9B8B0;
-  --ok-bg:rgba(62,154,106,.22); --ok-fg:#9BE0B9; --wa-bg:rgba(227,197,128,.2); --wa-fg:#F0D597; --no-bg:rgba(214,110,88,.24); --no-fg:#F5AE9E;
-  --gold-text:#E0BE74; --gold-soft:#2A2414; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#08150F; --surface:#0D211B; --ink:#ECE8DE; --muted:#A3B1AA; --line:#21392F;
-  --green:#071C17; --green-2:#0E2C24; --green-line:#24453A; --on-green:#EEEAE0; --on-green-dim:#A9B8B0;
-  --ok-bg:rgba(62,154,106,.22); --ok-fg:#9BE0B9; --wa-bg:rgba(227,197,128,.2); --wa-fg:#F0D597; --no-bg:rgba(214,110,88,.24); --no-fg:#F5AE9E;
-  --gold-text:#E0BE74; --gold-soft:#2A2414; color-scheme:dark}
 
 *{box-sizing:border-box}
+:root{color-scheme:light}
 [hidden]{display:none!important}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
