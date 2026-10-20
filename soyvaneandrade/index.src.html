@@ -383,7 +383,7 @@ footer .ans{color:var(--on-green-dim);font-size:13.5px}
 footer .ans strong{color:var(--on-green)}
 </style>
 
-<div class="preview" role="note"><div class="wrap"><b>Vista previa.</b> Falta el aviso de privacidad definitivo antes de publicar.</div></div>
+<div class="preview" role="note"><div class="wrap"><b>Vista previa.</b> Falta completar tu nombre completo y domicilio en el aviso de privacidad antes de publicar.</div></div>
 
 <header class="top">
   <div class="wrap">
@@ -693,7 +693,8 @@ footer .ans strong{color:var(--on-green)}
             <div class="field"><label for="l-tel">WhatsApp (10 dígitos)</label><input id="l-tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="33 1234 5678"></div>
             <div class="field"><label for="l-mail">Correo (opcional)</label><input id="l-mail" type="email" autocomplete="email"></div>
             <div class="hp" aria-hidden="true"><label for="l-web">No llenar</label><input id="l-web" type="text" tabindex="-1" autocomplete="off"></div>
-            <label class="check"><input id="l-ok" type="checkbox"><span>Acepto el <a href="#aviso">aviso de privacidad</a> y que Vanessa Andrade me contacte.</span></label>
+            <label class="check"><input id="l-ok" type="checkbox"><span>Acepto el <a href="{{L:aviso-de-privacidad}}" target="_blank" rel="noopener">aviso de privacidad</a> y doy mi consentimiento expreso para que Vanessa Andrade use mis datos, incluidos los financieros, para contactarme y asesorarme.</span></label>
+            <label class="check"><input id="l-mkt" type="checkbox"><span>Quiero recibir información y novedades (opcional).</span></label>
             <p class="err" id="l-err" role="alert"></p>
             <button class="btn btn-gold" type="submit" id="l-btn">Solicitar mi sesión</button>
           </form>
@@ -833,7 +834,8 @@ footer .ans strong{color:var(--on-green)}
           </select>
         </div>
         <div class="field full"><label for="c-msg">Mensaje (opcional)</label><textarea id="c-msg"></textarea></div>
-        <label class="check full"><input id="c-ok" type="checkbox"><span>Acepto el <a href="#aviso">aviso de privacidad</a> y que Vanessa Andrade me contacte.</span></label>
+        <label class="check full"><input id="c-ok" type="checkbox"><span>Acepto el <a href="{{L:aviso-de-privacidad}}" target="_blank" rel="noopener">aviso de privacidad</a> y doy mi consentimiento expreso para que Vanessa Andrade use mis datos, incluidos los financieros, para contactarme y asesorarme.</span></label>
+        <label class="check full"><input id="c-mkt" type="checkbox"><span>Quiero recibir información y novedades (opcional).</span></label>
         <p class="err full" id="c-err" role="alert"></p>
         <button class="btn btn-gold full" type="submit" id="c-btn">Enviar mensaje</button>
         <div class="done full" id="c-done" hidden>
@@ -852,6 +854,7 @@ footer .ans strong{color:var(--on-green)}
       <a href="{{L:plan-personal-de-retiro}}">Plan Personal de Retiro</a>
       <a href="{{L:seguro-de-vida}}">Seguro de vida</a>
       <a href="{{HOME}}#diagnostico">Diagnóstico gratis</a>
+      <a href="{{L:aviso-de-privacidad}}">Aviso de privacidad</a>
     </nav>
     <div class="foot-top">
       <p class="script">Te acompaño hoy, para proteger tu mañana.</p>
@@ -863,12 +866,6 @@ footer .ans strong{color:var(--on-green)}
         <div class="ans">
           <p><strong>Modalidad 40:</strong> revisa los requisitos de inscripción, el mínimo de 500 semanas y el porcentaje de pensión según la edad (75% a los 60, 100% a los 65). La cuota usa la tasa de 2026 (14.438%) y el tope de 25 UMA. No calcula el monto de tu pensión.</p>
           <p><strong>Ley 97:</strong> cifras en pesos de hoy. Supone un rendimiento real de 3.5% anual mientras ahorras y de 3% durante un retiro de 25 años, y aportaciones obligatorias equivalentes al 12% de tu ingreso si cotizas. La protección familiar usa la regla práctica de 10 veces tu ingreso anual más tus deudas; el colchón se mide contra 6 meses de gasto.</p>
-        </div>
-      </details>
-      <details id="aviso">
-        <summary>Aviso de privacidad</summary>
-        <div class="ans">
-          <p><strong>[Borrador para revisar antes de publicar.]</strong> Vanessa Andrade, con domicilio en Zapopan, Jalisco, y correo asesorvaneandrade@gmail.com, es responsable del tratamiento de los datos personales que proporcionas en este sitio. Los usamos para contactarte, revisar tu caso y preparar cotizaciones. No los compartimos con terceros, salvo con la aseguradora o institución que elijas para una cotización o trámite. Puedes ejercer tus derechos de acceso, rectificación, cancelación u oposición escribiendo al mismo correo.</p>
         </div>
       </details>
     </div>
@@ -1051,7 +1048,7 @@ footer .ans strong{color:var(--on-green)}
     var waMsg = "Hola Vanessa, soy " + nombre + ". Hice " + (route === "m40" ? "el pre-diagnóstico de Modalidad 40" : "la radiografía de mi retiro") + " en tu página y me gustaría agendar mi sesión gratis.";
     $("lead-wa").href = waLink(waMsg);
     var btn = $("l-btn"); btn.disabled = true; btn.textContent = "Enviando…";
-    sendMail({tipo: route === "m40" ? "Pre-diagnóstico Modalidad 40" : "Radiografía de retiro", nombre:nombre, telefono:tel, correo:mail, resumen:msg, website:$("l-web").value})
+    sendMail({tipo: route === "m40" ? "Pre-diagnóstico Modalidad 40" : "Radiografía de retiro", nombre:nombre, telefono:tel, correo:mail, resumen:msg, novedades:$("l-mkt").checked ? "Sí" : "No", website:$("l-web").value})
       .then(function(){ $("lead-t").textContent = OK_MSG; }, function(){ $("lead-t").textContent = FAIL_MSG; })
       .then(function(){ $("lead").hidden = true; $("lead-ok").hidden = false; btn.disabled = false; btn.textContent = "Solicitar mi sesión"; });
   });
@@ -1064,7 +1061,7 @@ footer .ans strong{color:var(--on-green)}
     var m = $("c-msg").value.trim();
     $("c-wa").href = waLink("Hola Vanessa, soy " + nombre + ". Me interesa: " + $("c-tema").value + "." + (m ? "\n" + m : "") + "\nMi WhatsApp: " + tel);
     var btn = $("c-btn"); btn.disabled = true; btn.textContent = "Enviando…";
-    sendMail({tipo:"Contacto", nombre:nombre, telefono:tel, correo:mail, tema:$("c-tema").value, mensaje:m, website:$("c-web").value})
+    sendMail({tipo:"Contacto", nombre:nombre, telefono:tel, correo:mail, tema:$("c-tema").value, mensaje:m, novedades:$("c-mkt").checked ? "Sí" : "No", website:$("c-web").value})
       .then(function(){ $("c-done-t").textContent = OK_MSG; $("c-wa").hidden = true; $("cform").reset(); },
             function(){ $("c-done-t").textContent = FAIL_MSG; $("c-wa").hidden = false; })
       .then(function(){ $("c-done").hidden = false; btn.disabled = false; btn.textContent = "Enviar mensaje"; });

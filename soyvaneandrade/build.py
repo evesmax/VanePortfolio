@@ -5,6 +5,7 @@
 #   site/public/ -> lo que se publica en vaneandrade.com (HTML completo, imágenes como archivos, sitemap, robots)
 import base64, html, json, os, re, shutil
 from pages import PAGES
+from legal import AVISO
 
 DOMAIN = "https://vaneandrade.com"
 WA = "https://wa.me/523334655385?text=Hola%20Vanessa%2C%20quiero%20agendar%20mi%20asesor%C3%ADa%20gratis."
@@ -18,6 +19,10 @@ css = src[src.index("<style>") + 7: src.index("</style>")]
 css += """
 body{margin:0} img{max-width:100%}
 .page-hero .btn-line{color:#F4F0E6}
+.legal-page{max-width:820px;display:flex;flex-direction:column;gap:14px}
+.legal-page h1{font-size:clamp(34px,5vw,48px)}
+.crumbs-l{font-size:13px;color:var(--muted)}
+.upd{color:var(--muted);font-size:14px;margin-bottom:10px}
 """
 fonts = "\n".join(l for l in src.split("\n") if l.startswith("<link rel="))
 body_home = src[src.index("</style>") + 8:]
@@ -84,8 +89,8 @@ def head(title, desc, path, extra_ld):
 
 def links(text, mode):
     # mode "site": rutas limpias; mode "preview": archivos .html junto a la vista previa
-    for p in PAGES:
-        text = text.replace("{{L:%s}}" % p["slug"], ("/" + p["slug"]) if mode == "site" else (p["slug"] + ".html"))
+    for slug in [p["slug"] for p in PAGES] + [AVISO["slug"]]:
+        text = text.replace("{{L:%s}}" % slug, ("/" + slug) if mode == "site" else (slug + ".html"))
     return text.replace("{{HOME}}", "/" if mode == "site" else "./").replace("{{WA}}", WA)
 
 def sub_header(mode):
@@ -144,6 +149,28 @@ def page_body(p, mode):
 {wa_float}
 """
 
+def legal_body(mode):
+    home = "/" if mode == "site" else "./"
+    return f"""{sub_header(mode)}
+
+<main>
+  <section class="block">
+    <div class="wrap legal-page">
+      <p class="crumbs-l"><a href="{home}">Inicio</a> › Aviso de privacidad</p>
+      <h1>{AVISO['h1']}</h1>
+      <p class="upd">Última actualización: {AVISO['updated']}</p>
+      <article class="prose-body">
+{AVISO['body']}
+      </article>
+    </div>
+  </section>
+</main>
+
+{footer}
+
+{wa_float}
+"""
+
 def build(mode):
     out = "site/public" if mode == "site" else "preview"
     os.makedirs(out + "/img", exist_ok=True)
@@ -184,9 +211,14 @@ def build(mode):
             body = preview_banner + body
         doc = head(p["title"], p["description"], "/" + p["slug"], [BUSINESS, svc, crumbs, faq]) + links(body, mode) + "\n</body>\n</html>\n"
         open(f"{out}/{p['slug']}.html", "w", encoding="utf-8").write(doc)
+    body = legal_body(mode)
+    if mode == "preview":
+        body = preview_banner + body
+    doc = head(AVISO["title"], AVISO["description"], "/" + AVISO["slug"], []) + links(body, mode) + "\n</body>\n</html>\n"
+    open(f"{out}/{AVISO['slug']}.html", "w", encoding="utf-8").write(doc)
     if mode == "site":
         open(f"{out}/robots.txt", "w").write(f"User-agent: *\nAllow: /\n\nSitemap: {DOMAIN}/sitemap.xml\n")
-        urls = ["/"] + ["/" + p["slug"] for p in PAGES]
+        urls = ["/"] + ["/" + p["slug"] for p in PAGES] + ["/" + AVISO["slug"]]
         open(f"{out}/sitemap.xml", "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
             "".join(f"  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n" for u in urls) + "</urlset>\n")
         shutil.copy("img/og.jpg", f"{out}/img/og.jpg")

@@ -46,13 +46,14 @@ app.post("/api/contact", async (req, res) => {
     tema: clean(b.tema, 80),
     mensaje: clean(b.mensaje, 3000),
     resumen: clean(b.resumen, 4000),
+    novedades: clean(b.novedades, 4),
   };
   if (d.nombre.length < 2 || d.telefono.length < 10) return res.status(400).json({ ok: false, error: "Faltan nombre o WhatsApp." });
   const correoOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.correo);
 
   const rows = [
     ["Tipo", d.tipo], ["Nombre", d.nombre], ["WhatsApp", d.telefono],
-    ["Correo", d.correo], ["Tema", d.tema], ["Mensaje", d.mensaje], ["Resumen", d.resumen],
+    ["Correo", d.correo], ["Tema", d.tema], ["Mensaje", d.mensaje], ["Resumen", d.resumen], ["Acepta recibir novedades", d.novedades],
   ].filter(([, v]) => v);
   const text = rows.map(([k, v]) => `${k}: ${v}`).join("\n\n") + `\n\nResponder por WhatsApp: https://wa.me/52${d.telefono.slice(-10)}`;
   const html = `<h2 style="font-family:Arial,sans-serif;color:#071C17">${esc(d.tipo)} desde vaneandrade.com</h2>
