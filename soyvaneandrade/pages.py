@@ -108,7 +108,7 @@ PAGES = [
 "slug": "seguro-de-vida",
 "title": "Seguro de vida en Zapopan: protege a tu familia | Vanessa Andrade",
 "description": "Calcula la suma asegurada que necesita tu familia y compara seguros de vida de MetLife, Allianz y Skandia. Asesoría gratis en Zapopan y en línea.",
-"img": "familia", "pos": "center 30%",
+"img": "familia", "pos": "center 47%",
 "eyebrow": "Seguro de vida",
 "h1": "Protege a tu familia, pase lo que pase",
 "lede": "Un seguro de vida hace que tu familia pueda seguir adelante si tú faltas: deudas pagadas, escuela de los hijos y gastos del día a día cubiertos.",
