@@ -100,9 +100,12 @@ p{margin:0}
 .svc.feature .ill text{fill:var(--on-green-dim)}
 .svc.feature .ill .f3{fill:var(--green)}
 .ill-sun{max-width:280px}
-.svc-hero{border-radius:6px;padding:clamp(40px,6vw,72px) clamp(20px,4vw,48px);margin-bottom:24px;color:#EEEAE0;
-  background:linear-gradient(90deg,rgba(7,28,23,.95) 0%,rgba(7,28,23,.78) 45%,rgba(7,28,23,.2) 100%),var(--img) var(--pos,center)/cover no-repeat,#071C17}
-.svc-hero .sec-head{margin:0;max-width:620px}
+.svc-hero{border-radius:6px;padding:clamp(40px,6vw,72px) clamp(20px,4vw,48px);margin-bottom:24px;color:#EEEAE0;min-height:340px;display:flex;align-items:center;
+  background:linear-gradient(90deg,#071C17 0%,#071C17 40%,rgba(7,28,23,.55) 52%,rgba(7,28,23,0) 64%),var(--img) right var(--pos,center)/60% auto no-repeat,#071C17}
+@media (max-width:760px){.svc-hero{min-height:0;padding-top:230px;align-items:flex-end;
+  background:linear-gradient(180deg,rgba(7,28,23,0) 0%,rgba(7,28,23,.2) 120px,#071C17 235px),var(--img) center -120px/100% auto no-repeat,#071C17}}
+.svc-hero .sec-head{margin:0;max-width:min(560px,44%)}
+@media (max-width:760px){.svc-hero .sec-head{max-width:none}}
 .svc-hero .eyebrow{color:#E3C580}
 .svc-hero h2{color:#F4F0E6}
 .svc-hero .lede{color:#CBD5CF}
@@ -536,7 +539,7 @@ body{margin:0} img{max-width:100%}
 
   <section class="block alt" id="servicios">
     <div class="wrap">
-      <div class="svc-hero" style="--img:url(img/header.jpg);--pos:center 30%">
+      <div class="svc-hero" style="--img:url(img/header.jpg);--pos:31%">
         <div class="sec-head">
           <p class="eyebrow">Cómo te ayudo</p>
           <h2>Soluciones pensadas para tu tranquilidad</h2>
