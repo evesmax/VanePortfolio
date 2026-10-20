@@ -1,0 +1,963 @@
+<title>Vanessa Andrade Asesoría</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Vanessa Andrade, asesora financiera y de seguros en Zapopan, Jalisco. Modalidad 40, planes para el retiro y seguros.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@400;500;600;700&family=Allura&display=swap">
+<style>
+/* Layout: banda verde profundo con foto (como su tarjeta), cuerpo marfil, diagnóstico en dos rutas con panel verde y dorado. */
+:root{
+  --bg:#F4F3EF; --surface:#FFFFFF; --ink:#13241E; --muted:#59675F; --line:#DEDBD1;
+  --green:#FBF8F1; --green-2:#F1ECDF; --green-line:#E2DACA; --on-green:#0B2C23; --on-green-dim:#55645C;
+  --ok-bg:rgba(62,154,106,.15); --ok-fg:#1F6B45; --wa-bg:rgba(200,150,46,.18); --wa-fg:#7A5512; --no-bg:rgba(194,85,63,.14); --no-fg:#9A3320;
+  --gold:#C9A35B; --gold-hi:#E3C580; --gold-text:#8A6420; --gold-soft:#F3EAD6;
+  --good:#3E9A6A; --warn:#C8962E; --bad:#C2553F;
+  --f-display:"Marcellus", "Cormorant Garamond", Georgia, serif;
+  --f-body:"Montserrat", "Segoe UI", system-ui, sans-serif;
+  --f-script:"Allura", "Snell Roundhand", cursive;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#08150F; --surface:#0D211B; --ink:#ECE8DE; --muted:#A3B1AA; --line:#21392F;
+  --green:#071C17; --green-2:#0E2C24; --green-line:#24453A; --on-green:#EEEAE0; --on-green-dim:#A9B8B0;
+  --ok-bg:rgba(62,154,106,.22); --ok-fg:#9BE0B9; --wa-bg:rgba(227,197,128,.2); --wa-fg:#F0D597; --no-bg:rgba(214,110,88,.24); --no-fg:#F5AE9E;
+  --gold-text:#E0BE74; --gold-soft:#2A2414; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#08150F; --surface:#0D211B; --ink:#ECE8DE; --muted:#A3B1AA; --line:#21392F;
+  --green:#071C17; --green-2:#0E2C24; --green-line:#24453A; --on-green:#EEEAE0; --on-green-dim:#A9B8B0;
+  --ok-bg:rgba(62,154,106,.22); --ok-fg:#9BE0B9; --wa-bg:rgba(227,197,128,.2); --wa-fg:#F0D597; --no-bg:rgba(214,110,88,.24); --no-fg:#F5AE9E;
+  --gold-text:#E0BE74; --gold-soft:#2A2414; color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:1.65}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--green)}
+a{color:var(--gold-text)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.12;text-wrap:balance;margin:0}
+h2{font-size:clamp(30px,4vw,44px)}
+h3{font-size:22px}
+p{margin:0}
+.eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-text)}
+.lede{color:var(--muted);max-width:62ch}
+.num{font-variant-numeric:tabular-nums}
+.gold-rule{width:72px;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-hi));border:0;margin:0}
+
+.preview{background:var(--gold-soft);font-size:13.5px}
+.preview .wrap{padding-block:7px}
+.preview b{color:var(--gold-text)}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--green);color:var(--on-green);border-bottom:1px solid var(--green-line)}
+.top .wrap{display:flex;align-items:center;gap:22px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--on-green)}
+.brand img{width:48px;height:48px;border-radius:50%}
+.brand span{display:flex;flex-direction:column;line-height:1.15}
+.brand b{font-family:var(--f-display);font-weight:400;font-size:19px;letter-spacing:.08em;text-transform:uppercase}
+.brand small{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-text)}
+.nav{display:flex;gap:18px;margin-left:auto}
+.nav a,.top .btn{white-space:nowrap}
+
+.nav a{color:var(--on-green);text-decoration:none;font-size:14px;font-weight:500}
+.nav a:hover{color:var(--gold-text)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 15px/1 var(--f-body);letter-spacing:.02em;padding:14px 24px;border-radius:4px;border:1px solid transparent;cursor:pointer;text-decoration:none;transition:transform .15s ease,filter .15s ease}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn-gold{background:linear-gradient(135deg,var(--gold-hi),var(--gold));color:#1E1606}
+.btn-line{background:transparent;color:var(--on-green);border-color:var(--gold)}
+.btn-dark{background:var(--green);color:var(--on-green)}
+.btn-sm{padding:10px 16px;font-size:13.5px}
+.btn-photo{background:transparent;color:var(--on-green);border-color:var(--gold);border-radius:999px;font-weight:500}
+.btn-photo:hover{background:var(--gold-soft)}
+.btn-photo .ico{width:16px;height:16px;color:var(--gold-text)}
+.top .wrap{gap:14px}
+@media (max-width:640px){.top .wrap{gap:10px}.top .ig + .ig{margin-left:0}.top .btn-gold.btn-sm{display:none}.brand span{display:none}}
+.ig{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--gold);color:var(--gold-text);flex:none;transition:background .15s ease,transform .15s ease}
+.ig:hover{background:var(--gold-soft)}
+.ig:hover{transform:translateY(-1px)}
+.ig .ico{width:20px;height:20px}
+.soc-ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%);color:#fff}
+.soc-fb{background:#1877F2;color:#fff}
+.soc-wa{background:#25D366;color:#fff}
+.btn-soc{align-self:flex-start;color:#fff;min-width:260px;justify-content:flex-start}
+.socials{display:flex;flex-direction:column;gap:10px}
+.wa-float{position:fixed;z-index:25;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.wa-float svg{width:30px;height:30px}
+@media (max-width:420px){.btn-soc{min-width:0;width:100%}}
+.ill{display:block;width:100%;height:auto;color:var(--gold-text)}
+.ill .f1{fill:var(--gold-soft)} .ill .f2{fill:var(--green-2)} .ill .f3{fill:var(--surface)}
+.ill text{fill:var(--muted);font:500 12px var(--f-body);letter-spacing:.04em}
+.sec-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,320px);gap:40px;align-items:end;margin-bottom:40px}
+.sec-split .sec-head{margin-bottom:0}
+@media (max-width:760px){.sec-split{grid-template-columns:1fr;gap:20px}.sec-split .ill{max-width:260px}}
+.svc.feature .ill text{fill:var(--on-green-dim)}
+.svc.feature .ill .f3{fill:var(--green)}
+.ill-sun{max-width:280px}
+.svc-hero{border-radius:6px;padding:clamp(40px,6vw,72px) clamp(20px,4vw,48px);margin-bottom:24px;color:#EEEAE0;
+  background:linear-gradient(90deg,rgba(7,28,23,.95) 0%,rgba(7,28,23,.78) 45%,rgba(7,28,23,.2) 100%),var(--img) var(--pos,center)/cover no-repeat,#071C17}
+.svc-hero .sec-head{margin:0;max-width:620px}
+.svc-hero .eyebrow{color:#E3C580}
+.svc-hero h2{color:#F4F0E6}
+.svc-hero .lede{color:#CBD5CF}
+.svc.has-photo{border-color:transparent;color:#EEEAE0;min-height:360px;justify-content:flex-end;
+  background:linear-gradient(180deg,rgba(7,28,23,.15) 0%,rgba(7,28,23,.7) 42%,rgba(7,28,23,.96) 78%),var(--img) var(--pos,center)/cover no-repeat,#071C17}
+.svc.has-photo h3{color:#F4F0E6}
+.svc.has-photo p{color:#CBD5CF;flex:0 0 auto}
+.svc.has-photo a:not(.btn){color:#E3C580}
+.svc.has-photo .ic{color:#E3C580;border-color:#E3C580;background:rgba(7,28,23,.55)}
+.svc.feature.has-photo{grid-template-columns:minmax(0,600px);min-height:380px;padding:clamp(28px,4vw,48px);
+  background:linear-gradient(90deg,rgba(7,28,23,.96) 0%,rgba(7,28,23,.85) 45%,rgba(7,28,23,.15) 100%),var(--img) var(--pos,center)/cover no-repeat,#071C17}
+.svc.feature.has-photo .tag{color:#E3C580}
+.svc.feature.has-photo{justify-content:start;align-content:center}
+.svc.feature.has-photo p{color:#CBD5CF}
+.svc.feature.has-photo h3{color:#F4F0E6}
+@media (max-width:760px){.svc.feature.has-photo{background:linear-gradient(180deg,rgba(7,28,23,.25) 0%,rgba(7,28,23,.9) 45%,rgba(7,28,23,.97) 100%),var(--img) var(--pos,center)/cover no-repeat,#071C17;min-height:460px;align-content:end}}
+.quote-card.has-photo{color:#EEEAE0;border-color:transparent;min-height:420px;justify-content:flex-end;
+  background:linear-gradient(180deg,rgba(7,28,23,.2) 0%,rgba(7,28,23,.75) 50%,rgba(7,28,23,.96) 100%),var(--img) var(--pos,center)/cover no-repeat,#071C17}
+.quote-card.has-photo .script{color:#E3C580}
+.quote-card.has-photo h3{color:#F4F0E6!important}
+.quote-card.has-photo p{color:#CBD5CF}
+.lico{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;border:1px solid var(--gold);color:var(--gold-text);flex:none}
+.lico svg{width:22px;height:22px}
+.hero .script{font-size:26px}
+.pgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:860px){.pgrid{grid-template-columns:1fr}}
+.pcard{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:26px;display:flex;flex-direction:column;gap:12px}
+.pcard p{color:var(--muted);font-size:15px}
+.belief{margin-top:36px;font-family:var(--f-display);font-size:clamp(22px,2.6vw,28px);line-height:1.3;max-width:34ch;color:var(--ink);border-left:2px solid var(--gold);padding-left:20px}
+.guide{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:56px;align-items:center}
+.guide-photo{width:100%;max-width:320px;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:160px 160px 6px 6px;border:2px solid var(--gold)}
+@media (max-width:760px){.guide{grid-template-columns:1fr;gap:28px}.guide-photo{max-width:240px}}
+.plan{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:860px){.plan{grid-template-columns:1fr}}
+.plan li{position:relative;display:flex;flex-direction:column;gap:12px;padding:26px;border-top:2px solid var(--gold);background:var(--surface);border-radius:0 0 6px 6px}
+.plan .pn{position:absolute;top:18px;right:22px;font-family:var(--f-display);font-weight:400;font-size:46px;line-height:1;color:var(--gold-soft);-webkit-text-stroke:1px var(--gold)}
+.plan p{color:var(--muted);font-size:15px}
+.plan-cta{margin-top:32px;display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center}
+.plan-cta p{color:var(--muted);font-size:15px}
+.stakes{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:start}
+@media (max-width:860px){.stakes{grid-template-columns:1fr;gap:28px}}
+.slist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.slist li{display:flex;gap:16px;align-items:center;padding:16px 18px;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
+.slist .lico{width:40px;height:40px;border-color:var(--line)}
+.slist .lico svg{width:19px;height:19px}
+.success{color:#EEEAE0;background:linear-gradient(90deg,rgba(7,28,23,.94) 0%,rgba(7,28,23,.78) 50%,rgba(7,28,23,.35) 100%),var(--img) var(--pos,center)/cover no-repeat,#071C17}
+.success .wrap{padding-block:clamp(64px,10vw,120px);display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+.success .script{font-size:clamp(34px,4vw,46px);color:#E3C580}
+.success h2{color:#F4F0E6;margin-top:-6px}
+.wins{list-style:none;margin:8px 0 10px;padding:0;display:flex;flex-direction:column;gap:10px;color:#DDE5E0}
+.wins li{display:flex;gap:12px;align-items:center}
+.wins svg{width:20px;height:20px;color:#E3C580;flex:none}
+.clist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.clist li{display:flex;gap:12px;align-items:center;font-weight:600}
+.clist svg{width:20px;height:20px;color:var(--gold-text);flex:none}
+.clist .copy{margin:0}
+.mini-btns{display:flex;flex-wrap:wrap;gap:18px 22px;margin-top:6px}
+.mini{display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-size:12.5px;font-weight:500;letter-spacing:.04em}
+.mini span{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;border:1px solid var(--gold);color:var(--gold-text);transition:background .15s ease,transform .15s ease}
+.mini span svg{width:22px;height:22px}
+.mini:hover span{background:var(--gold-soft);transform:translateY(-2px)}
+
+.teaser{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.teaser h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:26px;line-height:1.15;color:var(--on-green)}
+.teaser p{font-size:15px;color:var(--on-green-dim);line-height:1.55}
+.teaser .teaser-k{margin-top:6px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-text);font-weight:600}
+.locked{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;width:100%}
+.locked li{display:flex;gap:10px;align-items:center;font-size:14px;color:var(--on-green);padding:10px 12px;border:1px dashed var(--green-line);border-radius:4px}
+.locked li::before{content:"";width:14px;height:14px;flex:none;background:var(--gold);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Crect x='5' y='11' width='14' height='10' rx='2'/%3E%3Cpath d='M8 11V8a4 4 0 0 1 8 0v3'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Crect x='5' y='11' width='14' height='10' rx='2'/%3E%3Cpath d='M8 11V8a4 4 0 0 1 8 0v3'/%3E%3C/svg%3E") center/contain no-repeat}
+.btn-ig{align-self:flex-start;background:transparent;color:var(--ink);border-color:var(--gold)}
+.ico{width:18px;height:18px;flex:none}
+@media (max-width:1180px){.nav{display:none}.top .nav + .btn-photo{margin-left:auto}}
+@media (max-width:420px){.brand small{display:none}.brand b{font-size:16px}}
+
+/* hero */
+.hero{background:var(--green);color:var(--on-green);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:end;padding-top:clamp(40px,6vw,72px)}
+.hero-copy{display:flex;flex-direction:column;gap:22px;padding-bottom:clamp(40px,6vw,72px);min-width:0}
+.hero h1{font-size:clamp(38px,5.6vw,66px);color:var(--on-green)}
+.hero h1 em{font-style:normal;color:var(--gold-text)}
+.hero .lede{color:var(--on-green-dim)}
+.hero .eyebrow{color:var(--gold-text)}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.script{font-family:var(--f-script);font-size:30px;color:var(--gold-text);line-height:1}
+.photo{position:relative;align-self:end;justify-self:center;max-width:440px;width:100%}
+.photo img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center top;border-radius:220px 220px 0 0;border:2px solid var(--gold);border-bottom:0}
+.photo figcaption{position:absolute;left:-12px;bottom:28px;background:var(--surface);color:var(--ink);padding:12px 16px;border-left:3px solid var(--gold);box-shadow:0 10px 30px rgba(0,0,0,.25);display:flex;flex-direction:column;gap:2px;max-width:85%}
+.photo figcaption b{font-family:var(--f-display);font-weight:400;font-size:18px;letter-spacing:.06em;text-transform:uppercase}
+.photo figcaption span{font-size:12.5px;color:var(--muted)}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero-copy{padding-bottom:0}.photo{max-width:340px}.photo figcaption{left:0}}
+
+.pillars{background:var(--green-2);color:var(--on-green);border-top:1px solid var(--green-line)}
+.pillars .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding-block:22px;gap:16px}
+.pillar{display:flex;gap:14px;align-items:center;font-size:13px;letter-spacing:.1em;text-transform:uppercase;line-height:1.35}
+.pillar svg{width:34px;height:34px;color:var(--gold-text);flex:none}
+@media (max-width:700px){.pillars .wrap{grid-template-columns:1fr}}
+
+section.block{padding-block:clamp(56px,8vw,96px)}
+.sec-head{display:flex;flex-direction:column;gap:14px;margin-bottom:40px;align-items:flex-start}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:940px){.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.svc-grid{grid-template-columns:1fr}}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.svc .ic{width:52px;height:52px;border-radius:50%;border:1.5px solid var(--gold);display:grid;place-items:center;color:var(--gold-text)}
+.svc .ic svg{width:24px;height:24px}
+.svc p{color:var(--muted);font-size:15px;flex:1}
+.svc a{font-weight:600;font-size:14px;text-decoration:none}
+.svc a:hover{text-decoration:underline}
+.svc.feature{grid-column:1/-1;background:var(--green);color:var(--on-green);border-color:var(--green-line);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,340px);gap:32px;align-items:center;padding:32px}
+.svc.feature .ic{color:var(--gold-text)}
+.svc.feature p{color:var(--on-green-dim)}
+.svc.feature h3{font-size:28px}
+.svc.feature .tag{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);font-weight:600}
+.svc.feature > div{display:flex;flex-direction:column;gap:10px;min-width:0;align-items:flex-start}
+.svc.feature .btn{margin-top:8px}
+@media (max-width:760px){.svc.feature{grid-template-columns:1fr;padding:24px}.svc.feature .ill{max-width:300px}}
+
+/* diagnostic */
+.routes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px}
+@media (max-width:620px){.routes{grid-template-columns:1fr}}
+.route{text-align:left;background:var(--bg);border:1.5px solid var(--line);border-radius:6px;padding:16px 18px;cursor:pointer;color:var(--ink);font:inherit;display:flex;flex-direction:column;gap:4px}
+.route b{font-family:var(--f-display);font-weight:400;font-size:20px}
+.route span{font-size:14px;color:var(--muted)}
+.route[aria-selected="true"]{border-color:var(--gold);background:var(--gold-soft);box-shadow:inset 0 0 0 1px var(--gold)}
+.tool{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,430px);gap:32px;align-items:start}
+@media (max-width:980px){.tool{grid-template-columns:1fr}}
+.sample-note{font-size:13.5px;color:var(--muted);margin-bottom:14px}
+.form{display:flex;flex-direction:column;gap:20px;min-width:0}
+fieldset{border:1px solid var(--line);border-radius:6px;padding:20px;margin:0;background:var(--bg);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px}
+legend{font-family:var(--f-display);font-size:19px;padding:0 6px}
+@media (max-width:560px){fieldset{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.full{grid-column:1/-1}
+label{font-weight:600;font-size:14.5px}
+.hint{font-size:12.5px;color:var(--muted);line-height:1.45}
+input[type=text],input[type=number],input[type=tel],input[type=email],select,textarea{width:100%;font:500 16px var(--f-body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:11px 12px}
+textarea{min-height:96px;resize:vertical}
+.money{position:relative}
+.money::before{content:"$";position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.money input{padding-left:26px}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 28%,transparent)}
+
+.panel{border:1px solid var(--green-line);position:sticky;top:calc(env(safe-area-inset-top,0px) + 86px);background:var(--green);color:var(--on-green);border-radius:6px;padding:24px;display:flex;flex-direction:column;gap:18px;border-top:3px solid var(--gold)}
+@media (max-width:980px){.panel{position:static}}
+.panel-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline;border-bottom:1px solid var(--green-line);padding-bottom:12px}
+.panel-head h3{font-size:22px;color:var(--on-green)}
+.panel-head span{font-size:12px;color:var(--on-green-dim)}
+.reading{display:flex;flex-direction:column;gap:7px}
+.reading-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.reading-top b{font-weight:600;font-size:15px}
+.chip{font:600 11px/1 var(--f-body);letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:999px;white-space:nowrap}
+.chip.good{background:var(--ok-bg);color:var(--ok-fg)}
+.chip.warn{background:var(--wa-bg);color:var(--wa-fg)}
+.chip.bad{background:var(--no-bg);color:var(--no-fg)}
+.bar{height:8px;background:var(--green-2);border-radius:999px;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--gold),var(--gold-hi));transition:width .5s ease}
+.bar i.bad{background:#D66E58}
+.reading p{font-size:13.5px;color:var(--on-green-dim);line-height:1.5}
+.reading p b{color:var(--on-green)}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--green-line);border:1px solid var(--green-line);border-radius:4px;overflow:hidden}
+.kpi{background:var(--green);padding:12px 14px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.kpi span{font-size:11.5px;color:var(--on-green-dim);line-height:1.3}
+.kpi b{font-size:19px;font-weight:600;color:var(--on-green);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.kpi b.hl{color:var(--gold-text)}
+.panel .btn{width:100%}
+.panel-foot{font-size:12px;color:var(--on-green-dim);line-height:1.5}
+.panel-foot a{color:var(--gold-text)}
+.lead{display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--green-line);padding-top:16px}
+.lead label{color:var(--on-green)}
+.lead input{background:var(--green-2);color:var(--on-green);border-color:var(--green-line)}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;font-weight:400}
+.check input{margin-top:4px;width:18px;height:18px;flex:none;accent-color:var(--gold)}
+.err{color:var(--no-fg);font-size:13.5px}
+.err:empty{display:none}
+.done{display:flex;flex-direction:column;gap:10px;background:var(--green-2);border:1px solid var(--green-line);border-radius:4px;padding:14px}
+.done p{font-size:13.5px;color:var(--on-green-dim)}
+.steps-list{margin:0;padding-left:18px;font-size:13.5px;color:var(--on-green-dim);display:flex;flex-direction:column;gap:4px}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+.about-body{display:flex;flex-direction:column;gap:18px}
+.creds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+@media (max-width:520px){.creds{grid-template-columns:1fr}}
+.cred{background:var(--surface);padding:16px 18px;display:flex;flex-direction:column;gap:2px}
+.cred span{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+.cred b{font-weight:600}
+.quote-card{border:1px solid var(--green-line);background:var(--green);color:var(--on-green);border-radius:6px;padding:36px;display:flex;flex-direction:column;gap:14px}
+.quote-card .script{font-size:40px}
+.quote-card p{color:var(--on-green-dim)}
+
+/* faq */
+.faq{max-width:860px}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;padding:20px 0;font-family:var(--f-display);font-size:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold-text);font-size:26px;line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+.ans{padding:0 0 22px;display:flex;flex-direction:column;gap:10px;color:var(--muted);max-width:68ch}
+.ans strong{color:var(--ink)}
+.ans ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:48px;align-items:start}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+.cinfo{display:flex;flex-direction:column;gap:18px}
+.cline{display:flex;gap:14px;align-items:flex-start}
+.cline .ic{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--gold-hi),var(--gold));color:#1E1606;display:grid;place-items:center;flex:none}
+.cline .ic svg{width:18px;height:18px}
+.cline div{display:flex;flex-direction:column;min-width:0}
+.cline span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+.cline b{font-weight:600;overflow-wrap:anywhere}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cinfo .btn-contact{align-self:flex-start}
+.copy{font:600 12px var(--f-body);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:3px 10px;cursor:pointer;align-self:flex-start;margin-top:4px}
+.cform{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}
+@media (max-width:560px){.cform{grid-template-columns:1fr}}
+.cform .err{color:var(--bad)}
+.cform .done{background:var(--bg);border-color:var(--line)}
+.cform .done p{color:var(--muted)}
+
+footer{border-top:1px solid var(--green-line);background:var(--green);color:var(--on-green-dim);font-size:13.5px}
+footer .wrap{padding-block:40px 96px;display:flex;flex-direction:column;gap:20px}
+footer a{color:var(--gold-text)}
+.foot-top{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+.foot-top .script{font-size:28px}
+footer details{border-color:var(--green-line)}
+footer details:first-of-type{border-top-color:var(--green-line)}
+footer summary{font-size:15px;padding:12px 0;color:var(--on-green)}
+footer summary::after{color:var(--gold-text)}
+footer .ans{color:var(--on-green-dim);font-size:13.5px}
+footer .ans strong{color:var(--on-green)}
+</style>
+
+<div class="preview" role="note"><div class="wrap"><b>Vista previa.</b> Falta el aviso de privacidad definitivo antes de publicar.</div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><img src="data:image/png;base64,{{LOGO}}" alt=""><span><b>Vanessa Andrade</b><small>Asesor financiero y de seguros</small></span></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#plan">Cómo funciona</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#diagnostico">Diagnóstico</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-photo btn-sm" href="https://fotos.vaneandrade.com" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="3.5"/></svg>Fotografía</a>
+    <a class="ig" href="https://www.facebook.com/profile.php?id=61586427656629" target="_blank" rel="noopener" aria-label="Facebook de Vanessa Andrade"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 21v-8h3l.5-3.5H14V7.5c0-1 .4-1.5 1.5-1.5H17.5V3.2A20 20 0 0 0 15 3c-2.6 0-4.5 1.6-4.5 4.4v2.1H7.5V13h3v8"/></svg></a>
+    <a class="ig" href="https://www.instagram.com/soyvaneandrade" target="_blank" rel="noopener" aria-label="Instagram de Vanessa Andrade"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7h.01"/></svg></a>
+    <a class="btn btn-gold btn-sm" href="https://wa.me/523334655385?text=Hola%20Vanessa%2C%20me%20gustar%C3%ADa%20solicitar%20una%20asesor%C3%ADa." target="_blank" rel="noopener">Agenda tu asesoría</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">Modalidad 40 · Retiro · Seguros</p>
+        <h1>Mejora tu pensión y <em>retírate con tranquilidad</em></h1>
+        <hr class="gold-rule">
+        <p class="lede">Te ayudo a aumentar tu pensión del IMSS con Modalidad 40, a ahorrar para tu retiro y a proteger a tu familia, con un plan claro y acompañamiento en cada paso. En Zapopan y en línea en todo México.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="https://wa.me/523334655385?text=Hola%20Vanessa%2C%20quiero%20agendar%20mi%20asesor%C3%ADa%20gratis." target="_blank" rel="noopener">Agenda tu asesoría gratis</a>
+          <a class="btn btn-line" href="#diagnostico">Haz tu diagnóstico en 3 minutos</a>
+        </div>
+        <p class="script">Te acompaño hoy, para proteger tu mañana.</p>
+      </div>
+      <figure class="photo">
+        <img src="data:image/jpeg;base64,{{VANE}}" alt="Vanessa Andrade, asesora financiera y de seguros" width="720" height="960">
+        <figcaption><b>Vanessa Andrade</b><span>Agente de seguros con cédula CNSF</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+
+
+
+  <section class="block" id="problema">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">¿Te suena familiar?</p>
+        <h2>Trabajaste toda tu vida. Tu retiro no debería ser una incógnita.</h2>
+      </div>
+      <div class="pgrid">
+        <article class="pcard"><span class="lico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17h.01"/></svg></span><h3>No sabes cuánto vas a recibir</h3><p>Ni el IMSS ni tu Afore te dicen con claridad de cuánto será tu pensión, ni si te va a alcanzar para vivir.</p></article>
+        <article class="pcard"><span class="lico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.6-7.5 10-7.5 10Z"/></svg></span><h3>Te preocupa el futuro de tu familia</h3><p>Piensas qué pasaría con ellos si tú faltas, o si un día ya no puedes trabajar y no hay un respaldo.</p></article>
+        <article class="pcard"><span class="lico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 4v8h4M16 8v12M8 16h4"/></svg></span><h3>Los trámites y las reglas confunden</h3><p>Semanas, leyes, plazos, letras chiquitas. Es fácil tomar una mala decisión cuando nadie te lo explica bien.</p></article>
+      </div>
+      <p class="belief">Después de tantos años de esfuerzo, mereces retirarte con dignidad y sin miedo al mañana.</p>
+    </div>
+  </section>
+
+  <section class="block alt" id="sobre-mi">
+    <div class="wrap guide">
+      <img class="guide-photo" src="data:image/jpeg;base64,{{VANE}}" alt="Vanessa Andrade" width="720" height="960">
+      <div class="about-body">
+        <p class="eyebrow">Tu guía</p>
+        <h2>Te entiendo, y sé cómo ayudarte</h2>
+        <hr class="gold-rule">
+        <p class="lede">Sé lo angustiante que es no tener claro de qué vas a vivir cuando dejes de trabajar. Por eso explico cada opción con números, sin letras chiquitas, y te acompaño hasta que tu plan esté en marcha.</p>
+        <div class="creds">
+          <div class="cred full"><span>Distribuidora autorizada</span><b>MetLife, Allianz y Skandia</b></div>
+          <div class="cred"><span>Agente de seguros</span><b>Con cédula CNSF</b></div>
+          <div class="cred"><span>Especialidad</span><b>Modalidad 40 y retiro</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="plan">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Cómo funciona</p>
+        <h2>Tu plan en 3 pasos</h2>
+      </div>
+      <ol class="plan">
+        <li><span class="lico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg></span><b class="pn">1</b><h3>Agenda tu asesoría gratis</h3><p>Escríbeme o haz tu diagnóstico en línea. En 30 minutos revisamos tu situación.</p></li>
+        <li><span class="lico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg></span><b class="pn">2</b><h3>Recibe tu plan con números claros</h3><p>Revisamos tus semanas, tu Afore y tus seguros, y te digo qué conviene hacer primero.</p></li>
+        <li><span class="lico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h7a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h7"/></svg></span><b class="pn">3</b><h3>Ponlo en marcha con mi acompañamiento</h3><p>Te acompaño en los trámites y la contratación, y revisamos tu plan cada año.</p></li>
+      </ol>
+      <div class="plan-cta">
+        <a class="btn btn-gold" href="https://wa.me/523334655385?text=Hola%20Vanessa%2C%20quiero%20agendar%20mi%20asesor%C3%ADa%20gratis." target="_blank" rel="noopener">Agenda tu asesoría gratis</a>
+        <p>Sin costo y sin compromiso. Si algo no te conviene, te lo digo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="servicios">
+    <div class="wrap">
+      <div class="svc-hero" style="--img:url({{IMG:header}});--pos:center 30%">
+        <div class="sec-head">
+          <p class="eyebrow">Cómo te ayudo</p>
+          <h2>Soluciones pensadas para tu tranquilidad</h2>
+          <p class="lede">Cada plan empieza por entender tu situación. Después elegimos juntos lo que te conviene, con números claros.</p>
+        </div>
+      </div>
+      <div class="svc-grid">
+        <article class="svc feature has-photo" style="--img:url({{IMG:m40}});--pos:center 40%">
+          <div>
+            <span class="tag">Asesoría especializada</span>
+            <h3>Modalidad 40 del IMSS</h3>
+            <p>Si empezaste a cotizar antes de julio de 1997, puedes seguir cotizando por tu cuenta para sumar semanas y subir el salario con el que se calcula tu pensión. Reviso tu historial, te digo si te conviene, cuánto pagarías y te acompaño en el trámite.</p>
+            <a class="btn btn-gold" href="#diagnostico" data-route="m40">Ver si me conviene</a>
+          </div>
+          
+        </article>
+        <article class="svc has-photo" style="--img:url({{IMG:ppr}});--pos:35% center">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="12" r="6.5"/><path d="M17 9.5c1.8.3 3 1.3 3 2.5M11 9.5v5M9.3 10.5c0-.6.8-1 1.7-1s1.7.4 1.7 1-.8 1-1.7 1.2-1.7.6-1.7 1.3.8 1 1.7 1 1.7-.4 1.7-1"/><path d="M7 18l-1 3M15 18l1 3"/></svg></div>
+          <h3>Planes para el retiro</h3>
+          <p>Plan Personal de Retiro (PPR) para complementar tu Afore, con aportaciones que puedes deducir en tu declaración anual.</p>
+          <a href="#" data-wa="Planes para el retiro (PPR)">Más información</a>
+        </article>
+        <article class="svc has-photo" style="--img:url({{IMG:plan}})">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M8.5 10l1.5 1.5L13 8.5M8.5 16l1.5 1.5L13 14.5M15 10.5h1.5M15 16.5h1.5"/></svg></div>
+          <h3>Planificación financiera</h3>
+          <p>Organizamos tu dinero, tus deudas y tu ahorro para que alcances tus metas.</p>
+          <a href="#" data-wa="Planificación financiera">Más información</a>
+        </article>
+        <article class="svc has-photo" style="--img:url({{IMG:salud}});--pos:28% center">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 20s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.6-7.5 10-7.5 10Z"/><path d="M6 12h3l1.5-2.5 2 4 1.5-1.5H18"/></svg></div>
+          <h3>Seguros personales</h3>
+          <p>Seguro de vida y de gastos médicos para proteger lo más importante: tu vida y tu salud.</p>
+          <a href="#" data-wa="Seguros personales (vida y gastos médicos)">Más información</a>
+        </article>
+        <article class="svc has-photo" style="--img:url({{IMG:familia}});--pos:center 30%">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="6.5" r="2.5"/><circle cx="16" cy="6.5" r="2.5"/><path d="M4 20v-6a4 4 0 0 1 8 0v6M12 20v-6a4 4 0 0 1 8 0v6"/></svg></div>
+          <h3>Seguros para tu familia</h3>
+          <p>Tranquilidad y respaldo para quienes más amas, con la suma asegurada que de verdad necesitan.</p>
+          <a href="#" data-wa="Seguros para mi familia">Más información</a>
+        </article>
+        <article class="svc has-photo" style="--img:url({{IMG:casa}})">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5h4v5"/></svg></div>
+          <h3>Seguros patrimoniales</h3>
+          <p>Protegemos tu casa, tu auto y tus bienes ante cualquier imprevisto.</p>
+          <a href="#" data-wa="Seguros patrimoniales">Más información</a>
+        </article>
+        <article class="svc has-photo" style="--img:url({{IMG:ahorro}})">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 20V15M9 20v-7M14 20v-4M19 20V9"/><path d="m4 11 5-4 4 3 6-5M15 5h4v4"/></svg></div>
+          <h3>Ahorro e inversión</h3>
+          <p>Hacemos crecer tu dinero de forma inteligente, según tus metas y el tiempo que tienes.</p>
+          <a href="#" data-wa="Ahorro e inversión">Más información</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="diagnostico">
+    <div class="wrap">
+      <div class="sec-split">
+        <div class="sec-head">
+          <p class="eyebrow">Herramienta gratuita</p>
+          <h2>Diagnóstico de tu retiro</h2>
+          <p class="lede">Tu pensión depende de cuándo empezaste a cotizar en el IMSS. Elige tu caso y ve tu resultado al momento, sin registrarte.</p>
+        </div>
+        <svg class="ill" viewBox="0 0 300 235" role="img" aria-label="Lista de revisión con lupa sobre una gráfica"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect class="f3" x="62" y="28" width="146" height="186" rx="10"/>
+<rect class="f1" x="108" y="18" width="54" height="22" rx="5"/>
+<rect x="82" y="64" width="15" height="15" rx="3"/><path d="M85 71 l4 4 l7 -9"/><path d="M108 72 H186"/>
+<rect x="82" y="96" width="15" height="15" rx="3"/><path d="M85 103 l4 4 l7 -9"/><path d="M108 104 H176"/>
+<rect x="82" y="128" width="15" height="15" rx="3"/><path d="M108 136 H160"/>
+<path d="M82 194 L106 180 L128 186 L152 166 L176 158" stroke-width="2.4"/>
+<circle class="f1" cx="208" cy="152" r="34" stroke-width="3" fill-opacity=".55"/>
+<path d="M233 177 L262 206" stroke-width="9"/>
+</g></svg>
+      </div>
+
+      <div class="routes" role="tablist" aria-label="Elige tu caso">
+        <button class="route" role="tab" id="tab-m40" aria-controls="pane-m40" aria-selected="true" type="button"><b>Empecé a cotizar antes de julio de 1997</b><span>Ley 73 · Pre-diagnóstico de Modalidad 40</span></button>
+        <button class="route" role="tab" id="tab-rx" aria-controls="pane-rx" aria-selected="false" type="button"><b>Empecé después, o no cotizo</b><span>Ley 97 · Radiografía de tu ahorro para el retiro</span></button>
+      </div>
+      <p class="sample-note">Los datos que ves son de ejemplo. Cámbialos por los tuyos.</p>
+
+      <div class="tool">
+        <div>
+          <!-- Ruta Modalidad 40 -->
+          <form class="form" id="pane-m40" role="tabpanel" aria-labelledby="tab-m40" novalidate>
+            <fieldset>
+              <legend>Tu historial en el IMSS</legend>
+              <div class="field"><label for="m-edad">Edad</label><input id="m-edad" type="number" inputmode="numeric" min="35" max="75" value="60"></div>
+              <div class="field"><label for="m-semanas">Semanas cotizadas</label><input id="m-semanas" type="number" inputmode="numeric" min="0" step="10" value="1100"><span class="hint">Vienen en tu Constancia de semanas cotizadas del IMSS. Si no la tienes, pon un aproximado.</span></div>
+              <div class="field full"><label for="m-sit">¿Cotizas actualmente?</label>
+                <select id="m-sit">
+                  <option value="activo">Sí, tengo empleo con IMSS</option>
+                  <option value="baja" selected>No, me dieron de baja</option>
+                </select>
+              </div>
+              <div class="field" id="m-anios-f"><label for="m-anios">¿Hace cuántos años dejaste de cotizar?</label><input id="m-anios" type="number" inputmode="numeric" min="0" max="40" step="0.5" value="1"></div>
+              <div class="field" id="m-52-f"><label for="m-52">¿Cotizaste al menos 52 semanas en los 5 años antes de tu baja?</label>
+                <select id="m-52"><option value="si" selected>Sí</option><option value="no">No</option><option value="ns">No sé</option></select>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Tu plan</legend>
+              <div class="field"><label for="m-meta">¿A qué edad te quieres pensionar?</label>
+                <select id="m-meta"><option>60</option><option>61</option><option>62</option><option>63</option><option>64</option><option selected>65</option></select>
+              </div>
+              <div class="field"><label for="m-sal">Salario mensual con el que te gustaría cotizar</label><div class="money"><input id="m-sal" type="number" inputmode="numeric" min="0" step="1000" value="40000"></div><span class="hint">Mientras más alto, más sube tu pensión y más pagas. Tope: 25 UMA.</span></div>
+            </fieldset>
+          </form>
+
+          <!-- Ruta Ley 97 -->
+          <form class="form" id="pane-rx" role="tabpanel" aria-labelledby="tab-rx" hidden novalidate>
+            <fieldset>
+              <legend>Tú hoy</legend>
+              <div class="field"><label for="edad">Edad</label><input id="edad" type="number" inputmode="numeric" min="18" max="70" value="34"></div>
+              <div class="field"><label for="ingreso">Ingreso mensual neto</label><div class="money"><input id="ingreso" type="number" inputmode="numeric" min="0" step="500" value="30000"></div></div>
+              <div class="field"><label for="gasto">Gasto mensual</label><div class="money"><input id="gasto" type="number" inputmode="numeric" min="0" step="500" value="24000"></div><span class="hint">Incluye pagos de deudas.</span></div>
+              <div class="field"><label for="ahorro">Ahorro disponible</label><div class="money"><input id="ahorro" type="number" inputmode="numeric" min="0" step="1000" value="40000"></div><span class="hint">Sin contar tu Afore.</span></div>
+            </fieldset>
+            <fieldset>
+              <legend>Tu retiro</legend>
+              <div class="field full"><label for="regimen">¿Cotizas en el IMSS o el ISSSTE?</label>
+                <select id="regimen"><option value="97" selected>Sí</option><option value="ind">No, trabajo por mi cuenta</option></select>
+              </div>
+              <div class="field"><label for="afore">Saldo de tu Afore</label><div class="money"><input id="afore" type="number" inputmode="numeric" min="0" step="1000" value="120000"></div></div>
+              <div class="field"><label for="voluntario">Ahorro mensual extra para tu retiro</label><div class="money"><input id="voluntario" type="number" inputmode="numeric" min="0" step="100" value="0"></div></div>
+              <div class="field"><label for="retiro">Edad de retiro</label><input id="retiro" type="number" inputmode="numeric" min="50" max="75" value="65"></div>
+              <div class="field"><label for="deseado">Ingreso deseado al mes</label><div class="money"><input id="deseado" type="number" inputmode="numeric" min="0" step="500" value="21000"></div><span class="hint">En pesos de hoy. Referencia: 70% de tu ingreso.</span></div>
+            </fieldset>
+            <fieldset>
+              <legend>Tu familia</legend>
+              <div class="field"><label for="dependientes">Personas que dependen de ti</label>
+                <select id="dependientes"><option value="0">Ninguna</option><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4 o más</option></select>
+              </div>
+              <div class="field"><label for="deudas">Deudas (sin hipoteca)</label><div class="money"><input id="deudas" type="number" inputmode="numeric" min="0" step="1000" value="60000"></div></div>
+              <div class="field full"><label for="seguro">Suma asegurada de tus seguros de vida</label><div class="money"><input id="seguro" type="number" inputmode="numeric" min="0" step="10000" value="0"></div><span class="hint">Incluye el de tu trabajo. Si no sabes, déjalo en 0.</span></div>
+            </fieldset>
+          </form>
+        </div>
+
+        <aside class="panel" aria-live="polite" aria-label="Tu resultado">
+          <div class="panel-head"><h3 id="p-title">Pre-diagnóstico Modalidad 40</h3><span id="fecha"></span></div>
+
+          <div id="out-m40">
+            <div class="teaser">
+              <span class="chip" id="m-chip"></span>
+              <h4 id="m-head"></h4>
+              <p id="m-short"></p>
+              <p class="teaser-k">En tu sesión gratuita revisamos contigo:</p>
+              <ul class="locked">
+                <li>Si te conviene Modalidad 40 y con qué salario</li>
+                <li>Cuánto podría aumentar tu pensión</li>
+                <li>Cuánto pagarías y durante cuánto tiempo</li>
+                <li>Los pasos del trámite, de principio a fin</li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="out-rx" hidden>
+            <div class="teaser">
+              <span class="chip" id="r-chip"></span>
+              <h4 id="r-head"></h4>
+              <p id="r-short"></p>
+              <p class="teaser-k">En tu sesión gratuita revisamos contigo:</p>
+              <ul class="locked">
+                <li>Cuánto podrías recibir al retirarte</li>
+                <li>Cuánto te convendría ahorrar al mes</li>
+                <li>Qué protección necesita tu familia</li>
+                <li>Qué opción se ajusta mejor a ti</li>
+              </ul>
+            </div>
+          </div>
+
+          <button class="btn btn-gold" id="open-lead" type="button">Agendar mi sesión gratis</button>
+          <form class="lead" id="lead" hidden novalidate>
+            <p class="panel-foot" style="color:var(--on-green)">Déjame tus datos y te contacto para agendar tu sesión de 30 minutos, sin costo. Ten a la mano tu <span id="l-doc">Constancia de semanas cotizadas</span>.</p>
+            <div class="field"><label for="l-nombre">Nombre</label><input id="l-nombre" type="text" autocomplete="name"></div>
+            <div class="field"><label for="l-tel">WhatsApp (10 dígitos)</label><input id="l-tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="33 1234 5678"></div>
+            <div class="field"><label for="l-mail">Correo (opcional)</label><input id="l-mail" type="email" autocomplete="email"></div>
+            <div class="hp" aria-hidden="true"><label for="l-web">No llenar</label><input id="l-web" type="text" tabindex="-1" autocomplete="off"></div>
+            <label class="check"><input id="l-ok" type="checkbox"><span>Acepto el <a href="#aviso">aviso de privacidad</a> y que Vanessa Andrade me contacte.</span></label>
+            <p class="err" id="l-err" role="alert"></p>
+            <button class="btn btn-gold" type="submit" id="l-btn">Solicitar mi sesión</button>
+          </form>
+          <div class="done" id="lead-ok" hidden>
+            <p id="lead-t"></p>
+            <a class="btn btn-gold" id="lead-wa" href="#" target="_blank" rel="noopener">Enviar también por WhatsApp</a>
+          </div>
+
+          <p class="panel-foot" id="p-foot">Orientación general con base en la Ley del Seguro Social de 1973. No calcula el monto de tu pensión: eso requiere revisar tu historial completo. <a href="#preguntas">Ver requisitos</a></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="sin-plan">
+    <div class="wrap stakes">
+      <div class="sec-head" style="margin:0">
+        <p class="eyebrow">Lo que está en juego</p>
+        <h2>Esperar también es una decisión</h2>
+        <p class="lede">Sin un plan, es fácil perder oportunidades que después no se recuperan.</p>
+      </div>
+      <ul class="slist">
+        <li><span class="lico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 3 20h18L12 4Z"/><path d="M12 10v4M12 17h.01"/></svg></span><p>Pensionarte con menos de lo que podrías recibir.</p></li>
+        <li><span class="lico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 3 20h18L12 4Z"/><path d="M12 10v4M12 17h.01"/></svg></span><p>Perder la Modalidad 40: solo puedes inscribirte dentro de los 5 años siguientes a tu baja del IMSS.</p></li>
+        <li><span class="lico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 3 20h18L12 4Z"/><path d="M12 10v4M12 17h.01"/></svg></span><p>Que tu familia enfrente deudas y gastos sin ningún respaldo.</p></li>
+        <li><span class="lico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 3 20h18L12 4Z"/><path d="M12 10v4M12 17h.01"/></svg></span><p>Sacar tu ahorro para el retiro antes de tiempo y perder parte en impuestos.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="success" id="exito" style="--img:url({{IMG:road}});--pos:center 60%">
+    <div class="wrap">
+      <p class="script">Planeamos juntos hoy,</p>
+      <h2>para que vivas mejor mañana.</h2>
+      <ul class="wins">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7"/></svg>Sabes cuánto vas a recibir y desde cuándo.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7"/></svg>Tu pensión y tu ahorro trabajan para ti.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7"/></svg>Tu familia y tu patrimonio están protegidos.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7"/></svg>Te retiras con tranquilidad y sin sorpresas.</li>
+      </ul>
+      <a class="btn btn-gold" href="https://wa.me/523334655385?text=Hola%20Vanessa%2C%20quiero%20agendar%20mi%20asesor%C3%ADa%20gratis." target="_blank" rel="noopener">Agenda tu asesoría gratis</a>
+    </div>
+  </section>
+
+  <section class="block alt" id="preguntas">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Preguntas frecuentes</p>
+        <h2>Lo que más me preguntan</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>¿Qué es la Modalidad 40 y a quién le conviene?</summary>
+          <div class="ans">
+            <p>Es la continuación voluntaria en el régimen obligatorio del IMSS. Cuando ya no tienes empleo formal, sigues pagando tus cuotas por tu cuenta para <strong>sumar semanas</strong> y, si te registras con un salario más alto, <strong>subir el promedio salarial</strong> con el que se calcula tu pensión.</p>
+            <p>Conviene sobre todo a quien empezó a cotizar antes del 1 de julio de 1997 (Ley 73), porque su pensión se calcula con el salario promedio de las últimas 250 semanas, unos 5 años.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Qué requisitos necesito para inscribirme?</summary>
+          <div class="ans">
+            <ul>
+              <li>Haber cotizado al menos <strong>52 semanas en los 5 años</strong> anteriores a tu baja.</li>
+              <li>Que no hayan pasado <strong>más de 5 años</strong> desde tu baja. Si ya pasaron, normalmente necesitas volver a cotizar un año como trabajador.</li>
+              <li>No estar dado de alta como trabajador en el IMSS al mismo tiempo.</li>
+              <li>Registrarte con un salario igual o mayor al último que tuviste, con un tope de <strong>25 UMA</strong>.</li>
+            </ul>
+          </div>
+        </details>
+        <details>
+          <summary>¿Cuánto cuesta la Modalidad 40?</summary>
+          <div class="ans">
+            <p>En 2026 la cuota es de <strong>14.438%</strong> del salario con el que te registras, y sube cada año hasta 2030. Por ejemplo, si te registras con $30,000 al mes, pagarías alrededor de <strong>$4,331 mensuales</strong>. Con el tope de 25 UMA, unos $89,156 al mes, la cuota ronda los <strong>$12,872</strong>.</p>
+            <p>Por eso conviene calcular con cuidado con qué salario y durante cuánto tiempo cotizar.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Cuál es la diferencia entre Ley 73 y Ley 97?</summary>
+          <div class="ans">
+            <p>Si empezaste a cotizar <strong>antes del 1 de julio de 1997</strong>, puedes pensionarte por la Ley 73: tu pensión se calcula con tus semanas cotizadas y tu salario promedio de los últimos 5 años, y la paga el IMSS.</p>
+            <p>Si empezaste <strong>después</strong>, te toca la Ley 97: tu pensión depende principalmente de lo que se junte en tu Afore. En ese caso, un Plan Personal de Retiro es la forma más directa de complementarla.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿A qué edad me puedo pensionar por Ley 73?</summary>
+          <div class="ans">
+            <p>Desde los 60 años, con un mínimo de <strong>500 semanas</strong> cotizadas. A los 60 recibes el <strong>75%</strong> de la pensión, y sube 5% por cada año que esperes hasta el <strong>100% a los 65</strong>.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Puedo deducir lo que aporto a un Plan Personal de Retiro?</summary>
+          <div class="ans">
+            <p>Sí. El artículo 151 de la Ley del ISR permite deducir tus aportaciones hasta el <strong>10% de tus ingresos</strong> del año, con un tope de <strong>5 UMA anuales</strong> ($213,973.20 en 2026). Si retiras antes de los 65 años, pierdes el beneficio y te retienen 20% de ISR.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Cómo agendo una asesoría?</summary>
+          <div class="ans">
+            <p>Escríbeme por WhatsApp o llena el formulario de contacto. Si tu tema es Modalidad 40, ten a la mano tu <strong>Constancia de semanas cotizadas</strong>; la descargas en el sitio del IMSS con tu CURP y tu número de seguridad social.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="contacto">
+    <div class="wrap contact">
+      <div class="cinfo">
+        <p class="eyebrow">Contacto</p>
+        <h2>Da el primer paso hoy</h2>
+        <p class="lede">La primera asesoría es gratis y sin compromiso. Escríbeme y te contesto en menos de 24 horas hábiles.</p>
+        <ul class="clist">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Zapopan, Jalisco</span></li>
+        </ul>
+        <div class="mini-btns">
+          <a class="mini" href="#cform" id="go-contact"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>Contactar</a>
+          <a class="mini" href="https://wa.me/523334655385" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 19.5 5.6 16A8 8 0 1 1 8 18.4Z"/><path d="M9 9.5c.3 1.6 1.9 3.3 3.6 3.9l1.2-1 1.7.8c-.2.9-.9 1.5-1.8 1.4-2.8-.3-5.2-2.8-5.4-5.5 0-.9.6-1.6 1.4-1.7l.8 1.7-1 1"/></svg></span>WhatsApp</a>
+          <a class="mini" href="https://www.instagram.com/soyvaneandrade" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7h.01"/></svg></span>Instagram</a>
+          <a class="mini" href="https://www.facebook.com/profile.php?id=61586427656629" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 21v-8h3l.5-3.5H14V7.5c0-1 .4-1.5 1.5-1.5H17.5V3.2A20 20 0 0 0 15 3c-2.6 0-4.5 1.6-4.5 4.4v2.1H7.5V13h3v8"/></svg></span>Facebook</a>
+        </div>
+      </div>
+      <form class="cform" id="cform" novalidate>
+        <div class="field"><label for="c-nombre">Nombre completo</label><input id="c-nombre" type="text" autocomplete="name"></div>
+        <div class="field"><label for="c-tel">WhatsApp</label><input id="c-tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="33 1234 5678"></div>
+        <div class="field full"><label for="c-mail">Correo (opcional)</label><input id="c-mail" type="email" autocomplete="email"></div>
+        <div class="hp" aria-hidden="true"><label for="c-web">No llenar</label><input id="c-web" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="field full"><label for="c-tema">¿En qué te ayudo?</label>
+          <select id="c-tema">
+            <option>Modalidad 40</option>
+            <option>Plan para el retiro (PPR)</option>
+            <option>Seguro de vida</option>
+            <option>Seguro de gastos médicos</option>
+            <option>Seguro de casa o auto</option>
+            <option>Ahorro e inversión</option>
+            <option>Planificación financiera</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="field full"><label for="c-msg">Mensaje (opcional)</label><textarea id="c-msg"></textarea></div>
+        <label class="check full"><input id="c-ok" type="checkbox"><span>Acepto el <a href="#aviso">aviso de privacidad</a> y que Vanessa Andrade me contacte.</span></label>
+        <p class="err full" id="c-err" role="alert"></p>
+        <button class="btn btn-gold full" type="submit" id="c-btn">Enviar mensaje</button>
+        <div class="done full" id="c-done" hidden>
+          <p id="c-done-t"></p>
+          <a class="btn btn-gold" id="c-wa" href="#" target="_blank" rel="noopener" hidden>Enviar por WhatsApp</a>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <p class="script">Te acompaño hoy, para proteger tu mañana.</p>
+      <span style="display:flex;gap:18px;flex-wrap:wrap;align-items:center"><a href="https://www.instagram.com/soyvaneandrade" target="_blank" rel="noopener" style="display:inline-flex;gap:6px;align-items:center"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@soyvaneandrade</a><a href="https://www.facebook.com/profile.php?id=61586427656629" target="_blank" rel="noopener" style="display:inline-flex;gap:6px;align-items:center"><svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1Z"/></svg>Facebook</a><span>Fotografía: <a href="https://fotos.vaneandrade.com" target="_blank" rel="noopener">fotos.vaneandrade.com</a></span></span>
+    </div>
+    <div>
+      <details id="supuestos">
+        <summary>Cómo calculamos tu diagnóstico</summary>
+        <div class="ans">
+          <p><strong>Modalidad 40:</strong> revisa los requisitos de inscripción, el mínimo de 500 semanas y el porcentaje de pensión según la edad (75% a los 60, 100% a los 65). La cuota usa la tasa de 2026 (14.438%) y el tope de 25 UMA. No calcula el monto de tu pensión.</p>
+          <p><strong>Ley 97:</strong> cifras en pesos de hoy. Supone un rendimiento real de 3.5% anual mientras ahorras y de 3% durante un retiro de 25 años, y aportaciones obligatorias equivalentes al 12% de tu ingreso si cotizas. La protección familiar usa la regla práctica de 10 veces tu ingreso anual más tus deudas; el colchón se mide contra 6 meses de gasto.</p>
+        </div>
+      </details>
+      <details id="aviso">
+        <summary>Aviso de privacidad</summary>
+        <div class="ans">
+          <p><strong>[Borrador para revisar antes de publicar.]</strong> Vanessa Andrade, con domicilio en Zapopan, Jalisco, y correo asesorvaneandrade@gmail.com, es responsable del tratamiento de los datos personales que proporcionas en este sitio. Los usamos para contactarte, revisar tu caso y preparar cotizaciones. No los compartimos con terceros, salvo con la aseguradora o institución que elijas para una cotización o trámite. Puedes ejercer tus derechos de acceso, rectificación, cancelación u oposición escribiendo al mismo correo.</p>
+        </div>
+      </details>
+    </div>
+    <p>Los seguros y planes de retiro son emitidos por la aseguradora correspondiente; consulta sus condiciones generales. Los rendimientos de los planes ligados a inversión no están garantizados. La información de este sitio es orientativa y no sustituye una revisión de tu caso.</p>
+  </div>
+</footer>
+
+<a class="wa-float soc-wa" href="https://wa.me/523334655385?text=Hola%20Vanessa%2C%20me%20gustar%C3%ADa%20solicitar%20una%20asesor%C3%ADa." target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></svg></a>
+
+<script>
+(function(){
+  var WA = "523334655385";
+  var $ = function(id){ return document.getElementById(id); };
+  var mx = new Intl.NumberFormat("es-MX",{style:"currency",currency:"MXN",maximumFractionDigits:0});
+  var money = function(n){ return mx.format(Math.round(n)); };
+  var num = function(id){ var v = parseFloat($(id).value); return isFinite(v) && v > 0 ? v : 0; };
+  var waLink = function(t){ return "https://wa.me/" + WA + "?text=" + encodeURIComponent(t); };
+  var digits = function(s){ return (s||"").replace(/\D/g,""); };
+  function setChip(id, cls, txt){ var c = $(id); c.className = "chip " + cls; c.textContent = txt; }
+
+  /*CALC*/
+  var UMA = 117.31, TOPE = UMA * 25 * 30.4, TASA = 0.14438;
+  function calcM40(d){
+    var r = {};
+    // requisitos
+    if (d.sit === "activo") { r.req = ["warn","Al dejar tu empleo"]; r.reqT = "Mientras tengas empleo con IMSS no puedes estar en Modalidad 40. Puedes inscribirte cuando termine tu relación laboral; conviene planear ese momento."; }
+    else if (d.anios > 5) { r.req = ["bad","Primero reactivar"]; r.reqT = "Ya pasaron más de 5 años desde tu baja. Normalmente necesitas volver a cotizar un año como trabajador antes de poder inscribirte."; }
+    else if (d.c52 === "no") { r.req = ["bad","Primero reactivar"]; r.reqT = "Sin 52 semanas en los 5 años previos a tu baja no puedes inscribirte todavía. Hay que revisar cómo completarlas."; }
+    else if (d.c52 === "ns") { r.req = ["warn","Por confirmar"]; r.reqT = "Tu plazo desde la baja está en tiempo. Falta confirmar en tu constancia que tengas 52 semanas en los 5 años previos a tu baja."; }
+    else { r.req = ["good","Parece que cumples"]; r.reqT = "Tu baja tiene menos de 5 años y tienes 52 semanas en los 5 años previos. Puedes inscribirte; queda confirmarlo con tu constancia."; }
+    // semanas
+    var years = Math.max(0, d.meta - d.edad);
+    var proj = d.semanas + Math.round(years * 52);
+    if (d.semanas >= 500) { r.sem = ["good","Ya las tienes"]; r.semT = "Tienes " + d.semanas.toLocaleString("es-MX") + " semanas; el mínimo para pensionarte por Ley 73 es de 500."; }
+    else if (proj >= 500) { r.sem = ["warn","Las completarías"]; r.semT = "Tienes " + d.semanas + " de las 500 necesarias. Cotizando hasta los " + d.meta + " llegarías a unas " + proj + "."; }
+    else { r.sem = ["bad","No alcanzan"]; r.semT = "Tienes " + d.semanas + " de las 500 necesarias y a los " + d.meta + " llegarías a unas " + proj + ". Hay que buscar cómo completarlas."; }
+    // momento
+    var inicio = d.meta - 5;
+    if (years <= 0) { r.mom = ["warn","Ya tienes la edad"]; r.momT = "Ya puedes pensionarte a los " + d.meta + ". Antes de tramitar, conviene revisar si unos años de Modalidad 40 suben tu pensión lo suficiente."; }
+    else if (years > 5) { r.mom = ["warn","Aún es pronto"]; r.momT = "Tu pensión se calcula con tus últimas 250 semanas, unos 5 años. Lo ideal suele ser empezar alrededor de los " + inicio + " años."; }
+    else { r.mom = ["good","Buen momento"]; r.momT = "Te faltan " + years + (years === 1 ? " año" : " años") + " para pensionarte a los " + d.meta + ". Estás dentro de los últimos 5 años, que son los que cuentan para tu promedio."; }
+    r.pct = Math.min(100, 75 + (d.meta - 60) * 5);
+    r.salUsado = Math.min(d.sal, TOPE);
+    r.cuota = r.salUsado * TASA;
+    r.topado = d.sal > TOPE;
+    return r;
+  }
+  function calcRX(d){
+    var R_SAVE = 0.035, R_PAY = 0.03, OBLIG = 0.12;
+    var n = Math.max(0, d.retiro - d.edad) * 12;
+    var rm = Math.pow(1 + R_SAVE, 1/12) - 1, rp = Math.pow(1 + R_PAY, 1/12) - 1;
+    var fvF = n > 0 ? (Math.pow(1 + rm, n) - 1) / rm : 0;
+    var payF = rp / (1 - Math.pow(1 + rp, -300));
+    var oblig = d.regimen === "ind" ? 0 : d.ingreso * OBLIG;
+    var fund = d.afore * Math.pow(1 + rm, n) + (oblig + d.voluntario) * fvF;
+    var pension = fund * payF, gap = Math.max(0, d.deseado - pension);
+    var need = gap > 0 ? (n > 0 ? (gap / payF) / fvF : Infinity) : 0;
+    var sRet = d.deseado > 0 ? Math.min(100, pension / d.deseado * 100) : 100;
+    var protNeed = d.deudas + (d.dependientes > 0 ? d.ingreso * 120 : 0), protHave = d.seguro + d.ahorro;
+    var sPro = protNeed > 0 ? Math.min(100, protHave / protNeed * 100) : 100;
+    var meses = d.gasto > 0 ? d.ahorro / d.gasto : (d.ahorro > 0 ? 99 : 0);
+    return {pension:pension, gap:gap, need:need, sRet:sRet, protNeed:protNeed, protGap:Math.max(0, protNeed - protHave), sPro:sPro, meses:meses, sCol:Math.min(100, meses/6*100), sobra:d.ingreso - d.gasto, years:n/12};
+  }
+  /*ENDCALC*/
+
+  var route = "m40", lastM = null, lastR = null, dM = null, dR = null;
+
+  function readM(){ return {edad:num("m-edad"), semanas:num("m-semanas"), sit:$("m-sit").value, anios:num("m-anios"), c52:$("m-52").value, meta:parseInt($("m-meta").value,10), sal:num("m-sal")}; }
+  function renderM(){
+    var d = readM(), r = calcM40(d); dM = d; lastM = r;
+    var baja = d.sit === "baja";
+    $("m-anios-f").hidden = !baja; $("m-52-f").hidden = !baja;
+    var t;
+    if (r.req[0] === "bad") t = ["warn","Hay un paso previo","Modalidad 40 podría ayudarte, pero antes hay que resolver un requisito de inscripción. En tu sesión te digo cómo hacerlo."];
+    else if (r.sem[0] === "bad") t = ["warn","Requiere revisión","Todavía te faltan semanas para pensionarte por Ley 73. Hay formas de completarlas y conviene revisarlas juntos."];
+    else if (r.req[0] === "warn") t = ["warn","Con potencial","Tu caso tiene potencial para mejorar tu pensión con Modalidad 40. Hay detalles que conviene revisar antes de decidir."];
+    else t = ["good","Buen candidato","Por lo que nos compartes, podrías ser buen candidato para mejorar tu pensión con Modalidad 40."];
+    setChip("m-chip", t[0], "Tu resultado"); $("m-head").textContent = t[1]; $("m-short").textContent = t[2];
+  }
+  function level(s){ return s >= 80 ? ["good","Sano"] : s >= 50 ? ["warn","Atención"] : ["bad","Urgente"]; }
+  function bar(key, s){ var l = level(s); setChip("c-"+key, l[0], l[1]); var b = $("b-"+key); b.className = l[0] === "bad" ? "bad" : ""; b.style.width = Math.max(3, s).toFixed(0) + "%"; }
+  function readR(){ return {edad:num("edad"), ingreso:num("ingreso"), gasto:num("gasto"), ahorro:num("ahorro"), regimen:$("regimen").value, afore:num("afore"), voluntario:num("voluntario"), retiro:num("retiro"), deseado:num("deseado"), dependientes:parseInt($("dependientes").value,10)||0, deudas:num("deudas"), seguro:num("seguro")}; }
+  function renderR(){
+    var d = readR(), r = calcRX(d); dR = d; lastR = r;
+    var areas = [["ret", r.sRet, "tu ahorro para el retiro", "un Plan Personal de Retiro"], ["pro", r.sPro, "la protección de tu familia", "un seguro de vida"], ["col", r.sCol, "tu colchón para emergencias", "un plan de ahorro"]];
+    areas.sort(function(a, b){ return a[1] - b[1]; });
+    var low = areas[0], t;
+    if (low[1] >= 80) t = ["good","Vas por buen camino","Tus bases se ven sólidas. En una sesión afinamos tu plan para que no haya sorpresas."];
+    else if (low[1] >= 50) t = ["warn","Hay áreas por reforzar","Lo primero a revisar es " + low[2] + ". Una opción podría ser " + low[3] + "."];
+    else t = ["bad","Tu retiro necesita atención","Encontramos una brecha importante en " + low[2] + ". Tiene solución si actuamos a tiempo; una opción podría ser " + low[3] + "."];
+    setChip("r-chip", t[0], "Tu resultado"); $("r-head").textContent = t[1]; $("r-short").textContent = t[2]; r.teaser = t;
+  }
+  function setRoute(x){
+    route = x;
+    var m = x === "m40";
+    $("tab-m40").setAttribute("aria-selected", m); $("tab-rx").setAttribute("aria-selected", !m);
+    $("pane-m40").hidden = !m; $("pane-rx").hidden = m; $("out-m40").hidden = !m; $("out-rx").hidden = m;
+    $("p-title").textContent = m ? "Pre-diagnóstico Modalidad 40" : "Radiografía de tu retiro";
+    $("l-doc").textContent = m ? "Constancia de semanas cotizadas" : "estado de cuenta de tu Afore";
+    $("p-foot").innerHTML = m ? "Orientación general con base en la Ley del Seguro Social de 1973. No calcula el monto de tu pensión: eso requiere revisar tu historial completo. <a href=\"#supuestos\">Cómo lo calculamos</a>"
+                              : "Estimación educativa en pesos de hoy, con supuestos simplificados. No es una cotización ni garantiza rendimientos. <a href=\"#supuestos\">Cómo lo calculamos</a>";
+  }
+  $("tab-m40").addEventListener("click", function(){ setRoute("m40"); });
+  $("tab-rx").addEventListener("click", function(){ setRoute("rx"); });
+  ["input","change"].forEach(function(ev){ $("pane-m40").addEventListener(ev, renderM); $("pane-rx").addEventListener(ev, renderR); });
+  ["pane-m40","pane-rx"].forEach(function(id){ $(id).addEventListener("submit", function(e){ e.preventDefault(); }); });
+  document.querySelectorAll("[data-route]").forEach(function(a){ a.addEventListener("click", function(){ setRoute(a.getAttribute("data-route")); }); });
+  try { $("fecha").textContent = new Date().toLocaleDateString("es-MX",{day:"numeric",month:"short",year:"numeric"}); } catch(e){}
+  renderM(); renderR(); setRoute("m40");
+
+  document.querySelectorAll("[data-wa]").forEach(function(a){
+    a.href = waLink("Hola Vanessa, me gustaría información sobre: " + a.getAttribute("data-wa") + ".");
+    a.target = "_blank"; a.rel = "noopener";
+  });
+
+  var OK_MSG = "Recibí tu mensaje en mi correo. Te contesto en menos de 24 horas hábiles.";
+  var FAIL_MSG = "No pude enviar tu mensaje por correo en este momento. Envíamelo por WhatsApp y te contesto igual.";
+  function sendMail(payload){
+    return fetch("/api/contact", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(payload)})
+      .then(function(res){ if (!res.ok) throw new Error("http " + res.status); return res.json(); })
+      .then(function(j){ if (!j || !j.ok) throw new Error("rechazado"); return j; });
+  }
+  function validMail(m){ return !m || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m); }
+
+  $("go-contact").addEventListener("click", function(){ setTimeout(function(){ $("c-nombre").focus({preventScroll:true}); }, 400); });
+  $("open-lead").addEventListener("click", function(){ $("lead").hidden = false; this.hidden = true; $("l-nombre").focus(); });
+  $("lead").addEventListener("submit", function(e){
+    e.preventDefault();
+    var nombre = $("l-nombre").value.trim(), tel = digits($("l-tel").value), mail = $("l-mail").value.trim();
+    var err = !nombre ? "Escribe tu nombre." : tel.length < 10 ? "Escribe tu WhatsApp a 10 dígitos." : !validMail(mail) ? "Revisa tu correo." : !$("l-ok").checked ? "Necesito que aceptes el aviso de privacidad para contactarte." : "";
+    $("l-err").textContent = err; if (err) return;
+    var msg;
+    if (route === "m40") {
+      var d = dM, r = lastM;
+      msg = "Hola Vanessa, soy " + nombre + ". Hice el pre-diagnóstico de Modalidad 40.\n\n" +
+        "Edad: " + d.edad + " | Semanas: " + d.semanas + "\n" +
+        (d.sit === "activo" ? "Cotizo actualmente\n" : "Me dieron de baja hace " + d.anios + " años | 52 semanas en 5 años: " + ({si:"Sí",no:"No",ns:"No sé"})[d.c52] + "\n") +
+        "Me quiero pensionar a los " + d.meta + " | Salario para cotizar: " + money(d.sal) + "\n\n" +
+        "Requisitos: " + r.req[1] + " (" + r.reqT + ")\nSemanas: " + r.sem[1] + " (" + r.semT + ")\nMomento: " + r.mom[1] + " (" + r.momT + ")\nCuota mensual aprox. 2026: " + money(r.cuota) + " | Pensión a esa edad: " + r.pct + "%\n\n" +
+        "Mi WhatsApp: " + tel + "\nQuiero agendar mi sesión.";
+    } else {
+      var d2 = dR, r2 = lastR;
+      msg = "Hola Vanessa, soy " + nombre + ". Hice la radiografía de mi retiro.\n\n" +
+        "Edad: " + d2.edad + " | Ingreso: " + money(d2.ingreso) + " | Afore: " + money(d2.afore) + "\n" +
+        "Retiro: " + r2.sRet.toFixed(0) + "/100 (me faltarían " + money(r2.gap) + " al mes)\n" +
+        "Protección: " + r2.sPro.toFixed(0) + "/100 (le faltan " + money(r2.protGap) + ") | Colchón: " + r2.meses.toFixed(1) + " meses\n" +
+        "Pensión estimada: " + money(r2.pension) + " | Ahorro extra necesario: " + (isFinite(r2.need) ? money(r2.need) : "—") + " al mes\n\n" +
+        "Mi WhatsApp: " + tel + "\nQuiero agendar mi sesión.";
+    }
+    var waMsg = "Hola Vanessa, soy " + nombre + ". Hice " + (route === "m40" ? "el pre-diagnóstico de Modalidad 40" : "la radiografía de mi retiro") + " en tu página y me gustaría agendar mi sesión gratis.";
+    $("lead-wa").href = waLink(waMsg);
+    var btn = $("l-btn"); btn.disabled = true; btn.textContent = "Enviando…";
+    sendMail({tipo: route === "m40" ? "Pre-diagnóstico Modalidad 40" : "Radiografía de retiro", nombre:nombre, telefono:tel, correo:mail, resumen:msg, website:$("l-web").value})
+      .then(function(){ $("lead-t").textContent = OK_MSG; }, function(){ $("lead-t").textContent = FAIL_MSG; })
+      .then(function(){ $("lead").hidden = true; $("lead-ok").hidden = false; btn.disabled = false; btn.textContent = "Solicitar mi sesión"; });
+  });
+
+  $("cform").addEventListener("submit", function(e){
+    e.preventDefault();
+    var nombre = $("c-nombre").value.trim(), tel = digits($("c-tel").value), mail = $("c-mail").value.trim();
+    var err = !nombre ? "Escribe tu nombre." : tel.length < 10 ? "Escribe tu WhatsApp a 10 dígitos." : !validMail(mail) ? "Revisa tu correo." : !$("c-ok").checked ? "Necesito que aceptes el aviso de privacidad para contactarte." : "";
+    $("c-err").textContent = err; if (err) return;
+    var m = $("c-msg").value.trim();
+    $("c-wa").href = waLink("Hola Vanessa, soy " + nombre + ". Me interesa: " + $("c-tema").value + "." + (m ? "\n" + m : "") + "\nMi WhatsApp: " + tel);
+    var btn = $("c-btn"); btn.disabled = true; btn.textContent = "Enviando…";
+    sendMail({tipo:"Contacto", nombre:nombre, telefono:tel, correo:mail, tema:$("c-tema").value, mensaje:m, website:$("c-web").value})
+      .then(function(){ $("c-done-t").textContent = OK_MSG; $("c-wa").hidden = true; $("cform").reset(); },
+            function(){ $("c-done-t").textContent = FAIL_MSG; $("c-wa").hidden = false; })
+      .then(function(){ $("c-done").hidden = false; btn.disabled = false; btn.textContent = "Enviar mensaje"; });
+  });
+
+  document.querySelectorAll("[data-copy]").forEach(function(b){
+    b.addEventListener("click", function(){
+      var t = b.getAttribute("data-copy"), ok = function(){ b.textContent = "Copiado"; setTimeout(function(){ b.textContent = "Copiar"; }, 1600); };
+      var sel = function(){ try { var r = document.createRange(); r.selectNodeContents(b.previousElementSibling); var s = getSelection(); s.removeAllRanges(); s.addRange(r); } catch(e){} };
+      try { navigator.clipboard.writeText(t).then(ok, sel); } catch(e){ sel(); }
+    });
+  });
+})();
+</script>
